@@ -1,0 +1,11 @@
+:root {
+  --background-layout: rgb(19, 115, 199);
+  --background-header: burlywood;
+  --background-main: red;
+  --background-footer: rgb(175, 139, 130);
+  --background-not-found: rgb(177, 156, 129);
+  --background-input: #d9d5cf;
+  --color-content-not-found: #637671;
+  --color-title-search: darkslateblue;
+  --color-input-text: #685372;
+}
