@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Routers } from '../../utils/enums/routers';
+import { Routers } from '../../types/enums/routers';
 import styles from './nav.module.css';
 
 export const Nav = () => (

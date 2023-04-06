@@ -1,9 +1,9 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { About } from '../../pages/about/About';
-import { Layout } from '../../pages/layout/Layout';
-import { Main } from '../../pages/main/Main';
-import { NotFound } from '../../pages/not-found/Not-found';
-import { Routers } from '../../utils/enums/routers';
+import { About } from '../pages/about/About';
+import { Layout } from '../pages/layout/Layout';
+import { Main } from '../pages/main/Main';
+import { NotFound } from '../pages/not-found/Not-found';
+import { Routers } from '../types/enums/routers';
 
 export const App = () => (
   <Routes>
