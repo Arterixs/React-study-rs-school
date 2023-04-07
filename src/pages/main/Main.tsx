@@ -1,12 +1,16 @@
+import { ICardProps } from '../../types/interface/card';
+import { Card } from './components/Card';
 import { Search } from './components/search/search';
 import styles from './main.module.css';
 
-export const Main = () => (
+export const Main = ({ contentCard }: ICardProps) => (
   <section className={styles.container}>
     <section className={styles['search-block']}>
       <p className={styles['search-block__title']}>Search</p>
       <Search />
     </section>
-    <section>Card</section>
+    <section className={styles['card-block']}>
+      <Card {...{ contentCard }} />
+    </section>
   </section>
 );

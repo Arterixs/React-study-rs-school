@@ -5,7 +5,16 @@
   --background-footer: rgb(175, 139, 130);
   --background-not-found: rgb(177, 156, 129);
   --background-input: #d9d5cf;
+  --background-card: #303030;
+  --background-button-audio: #000;
+
   --color-content-not-found: #637671;
   --color-title-search: darkslateblue;
   --color-input-text: #685372;
+  --color-content-card: #9ca8a6;
+  --color-border-card: #555;
+
+  --font-regular: 'Montserrat-reg', sans-serif;
+  --font-semi: 'Montserrat-semi', sans-serif;
+  --font-bold: 'Montserrat-bold', sans-serif;
 }

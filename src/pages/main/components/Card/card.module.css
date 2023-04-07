@@ -1,0 +1,13 @@
+.card {
+  width: 340px;
+  border: 1px solid var(--color-border-card);
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: var(--background-card);
+}
+
+.content {
+  display: flex;
+  gap: 10px;
+}
