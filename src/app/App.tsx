@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { About } from '../pages/about/About';
-import { Layout } from '../pages/layout/Layout';
-import { Main } from '../pages/main/Main';
-import { NotFound } from '../pages/not-found/Not-found';
+import { About } from '../pages/about/about';
+import { Layout } from '../pages/layout/layout';
+import { Main } from '../pages/main/main';
+import { NotFound } from '../pages/not-found/not-found';
 import { Routers } from '../types/enums/routers';
 import { birdsData } from '../store/data';
 

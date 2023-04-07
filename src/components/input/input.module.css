@@ -1,0 +1,36 @@
+.audio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  max-width: 1000px;
+  width: 100%;
+  margin-top: 18px;
+  margin-bottom: 15px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(
+    to right,
+    var(--gradient-input-audio-one),
+    var(--gradient-input-audio-two),
+    var(--gradient-input-audio-three),
+    var(--gradient-input-audio-three)
+  );
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: var(--background-thumbs-audio);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+
+  &::-moz-range-thumb {
+    -webkit-appearance: none;
+    background: var(--background-thumbs-audio);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+}

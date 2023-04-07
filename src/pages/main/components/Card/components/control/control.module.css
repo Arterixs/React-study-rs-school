@@ -1,0 +1,16 @@
+.control {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.timer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.time {
+  font-family: var(--font-regular);
+  font-size: 14px;
+  color: var(--color-content-card);
+}

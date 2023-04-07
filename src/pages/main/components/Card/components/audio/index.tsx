@@ -1,17 +1,14 @@
 import { Button } from '../../../../../../components/button';
-import { ButtonClasses } from '../../../../../../types/enums/button';
+import { Svg } from '../../../../../../components/svg';
+import { ButtonClasses, SVGClasses } from '../../../../../../types/enums/classes';
+import { SvgId } from '../../../../../../types/enums/svg';
+import { Control } from '../control';
 
 export const Audio = () => (
   <>
     <Button onClick={() => console.log('func')} className={ButtonClasses.AUDIO}>
-      <p>2</p>
+      <Svg id={SvgId.PLAY} className={SVGClasses.AUDIO} />
     </Button>
-    <div>
-      <input type='text' />
-      <div>
-        <p>0:00</p>
-        <p>0:00</p>
-      </div>
-    </div>
+    <Control />
   </>
 );

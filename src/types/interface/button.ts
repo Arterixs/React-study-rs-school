@@ -1,4 +1,4 @@
-import { ButtonClasses } from '../enums/button';
+import { ButtonClasses } from '../enums/classes';
 
 export interface IButtonProps {
   onClick: () => void;

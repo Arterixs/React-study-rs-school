@@ -13,6 +13,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:import/recommended',
+    '@sserov/dirnames',
     'prettier',
   ],
   overrides: [
@@ -37,11 +38,12 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'prettier'],
+  plugins: ['react', '@typescript-eslint', '@sserov/dirnames', 'prettier'],
   rules: {
     'import/no-default-export': 'off',
     'import/prefer-default-export': 'off',
     'react/function-component-definition': 'off',
     'react/prefer-stateless-function': 'off',
+    '@sserov/dirnames/match-kebab-case': 'error',
   },
 };
