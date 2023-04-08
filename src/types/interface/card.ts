@@ -6,7 +6,3 @@ export interface IBirdsCard {
   image: string;
   audio: string;
 }
-
-export interface ICardProps {
-  contentCard: IBirdsCard[][];
-}

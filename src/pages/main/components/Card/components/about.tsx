@@ -1,4 +1,4 @@
-import { IAboutCardProps } from '../../../../../types/interface/aboutCard';
+import { IAboutCardProps } from '../../../../../types/interface/props';
 import styles from './about-card.module.css';
 
 export const AboutCard = ({ name, species }: IAboutCardProps) => (

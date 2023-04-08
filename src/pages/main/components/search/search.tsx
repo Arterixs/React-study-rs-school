@@ -1,18 +1,26 @@
-import React, { Component } from 'react';
-import { ISearchState } from '../../../../types/interface/search';
-import { getValueLocalStorage, setItemLocalStorage } from '../../../../utils/helpers/search';
+import { ChangeEvent, PureComponent } from 'react';
+import { ISearchProps } from '../../../../types/interface/props';
+import { ISearchState } from '../../../../types/interface/states';
+import { getValueLocalStorage, setItemLocalStorage } from '../../../../utils/helpers/local-storage-api';
 import style from './search.module.css';
 
-export class Search extends Component<Readonly<unknown>, ISearchState> {
-  myRef: React.RefObject<HTMLInputElement>;
+export class Search extends PureComponent<ISearchProps, ISearchState> {
+  searchCards: (stateInput: string) => void;
 
-  constructor(props: Readonly<unknown>) {
+  constructor(props: ISearchProps) {
     super(props);
-    this.myRef = React.createRef();
-    const valueInput = getValueLocalStorage();
+    const valueInputStore = getValueLocalStorage();
     this.state = {
-      valueInput,
+      valueInput: valueInputStore,
     };
+    const { valueInput } = this.state;
+    this.searchCards = props.func;
+    this.searchCards(valueInput);
+  }
+
+  componentDidUpdate() {
+    const { valueInput } = this.state;
+    this.searchCards(valueInput);
   }
 
   componentWillUnmount() {
@@ -20,15 +28,12 @@ export class Search extends Component<Readonly<unknown>, ISearchState> {
     setItemLocalStorage(valueInput);
   }
 
-  handleChange = () => {
-    const value = this.myRef.current?.value;
-    if (typeof value === 'string') this.setState({ valueInput: value });
+  handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    this.setState({ valueInput: e.target.value });
   };
 
   render() {
     const { valueInput } = this.state;
-    return (
-      <input type='text' className={style.input} value={valueInput} ref={this.myRef} onChange={this.handleChange} />
-    );
+    return <input type='text' className={style.input} value={valueInput} onChange={this.handleChange} />;
   }
 }

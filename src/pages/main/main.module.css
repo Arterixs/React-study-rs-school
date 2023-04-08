@@ -23,8 +23,3 @@
   line-height: calc(2px + 2ex + 2px);
   color: var(--color-title-search);
 }
-
-.card-block {
-  width: 100%;
-  display: flex;
-}

@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { IButtonProps } from '../../types/interface/button';
+import { IButtonProps } from '../../types/interface/props';
 import styles from './btn.module.css';
 
 export const Button = ({ onClick, children, className }: IButtonProps) => (

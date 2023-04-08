@@ -1,0 +1,8 @@
+.card-block {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 15px;
+  row-gap: 30px;
+}
