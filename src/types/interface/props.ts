@@ -1,4 +1,6 @@
-import { ButtonClasses } from '../enums/classes';
+import { ChangeEvent } from 'react';
+import { ButtonClasses, InputClasses } from '../enums/classes';
+import { TypesComponents } from '../enums/types-components';
 import { IBirdsCard } from './card';
 
 export interface IAboutCardProps {
@@ -31,4 +33,12 @@ export interface ICardBlockProps {
 
 export interface ICardProps {
   item: IBirdsCard;
+}
+
+export interface IInputProps {
+  type: TypesComponents;
+  className: InputClasses;
+  defaultValue?: number | string;
+  value?: string | number;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }

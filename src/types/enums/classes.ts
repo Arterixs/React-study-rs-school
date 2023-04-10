@@ -4,6 +4,7 @@ export const enum ButtonClasses {
 
 export const enum InputClasses {
   AUDIO = 'audio',
+  SEARCH = 'search',
 }
 
 export const enum SVGClasses {

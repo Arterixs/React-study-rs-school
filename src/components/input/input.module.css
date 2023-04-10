@@ -34,3 +34,16 @@
     border-radius: 50%;
   }
 }
+
+.search {
+  width: 300px;
+  height: 30px;
+  padding: 5px 5px 5px 5px;
+  outline: none;
+  font-family: 'Montserrat-reg', sans-serif;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  color: var(--color-input-text);
+  background-color: var(--background-input);
+}

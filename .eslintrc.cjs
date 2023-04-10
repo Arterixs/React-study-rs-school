@@ -39,6 +39,7 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
+    'react/jsx-props-no-spreading': 'off',
     'import/no-default-export': 'off',
     'import/prefer-default-export': 'off',
     'react/function-component-definition': 'off',

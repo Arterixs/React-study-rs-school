@@ -1,44 +1,57 @@
-import { Component } from 'react';
+import { ChangeEvent, Component } from 'react';
+import { Input } from '../../components/input';
 import { Sprite } from '../../components/sprite/sprite';
-import { IBirdsCard } from '../../types/interface/card';
+import { InputClasses } from '../../types/enums/classes';
+import { TypesComponents } from '../../types/enums/types-components';
 import { IMainProps } from '../../types/interface/props';
 import { IMainState } from '../../types/interface/states';
 import { setCopyBirds } from '../../utils/helpers/copy-elements';
+import { getValueLocalStorage, setItemLocalStorage } from '../../utils/helpers/local-storage-api';
 import { searchCards } from '../../utils/helpers/search-components';
 import { CardBlock } from './components/card-block';
-import { Search } from './components/search/search';
 import styles from './main.module.css';
 
 export class Main extends Component<IMainProps, IMainState> {
-  private searchContentCard: (stateInput: string) => void;
-
   constructor(props: IMainProps) {
     super(props);
+    const valueInputStore = getValueLocalStorage();
+    const copyContentCard = setCopyBirds(props.contentCard[0]);
+    const filterCard = searchCards(copyContentCard, valueInputStore);
     this.state = {
       contentCard: props.contentCard[0],
-      filterCard: props.contentCard[0],
-    };
-
-    const { contentCard } = this.state;
-    const copyContentCard = setCopyBirds(contentCard);
-
-    this.searchContentCard = (stateInput: string) => {
-      const resultSearch = searchCards(copyContentCard, stateInput);
-      this.updateSearch(resultSearch);
+      filterCard,
+      valueSearch: valueInputStore,
     };
   }
 
-  updateSearch(result: IBirdsCard[]) {
-    this.setState({ filterCard: result });
+  componentWillUnmount() {
+    const { valueSearch } = this.state;
+    setItemLocalStorage(valueSearch);
+  }
+
+  changeValueInput = (e: ChangeEvent<HTMLInputElement>) => {
+    const resultSearch = this.searchContentCard(e.target.value);
+    this.setState({ filterCard: resultSearch, valueSearch: e.target.value });
+  };
+
+  searchContentCard(stateInput: string) {
+    const { contentCard } = this.state;
+    const copyContentCard = setCopyBirds(contentCard);
+    return searchCards(copyContentCard, stateInput);
   }
 
   render() {
-    const { filterCard } = this.state;
+    const { filterCard, valueSearch } = this.state;
     return (
       <section className={styles.container}>
         <section className={styles['search-block']}>
           <p className={styles['search-block__title']}>Search</p>
-          <Search func={this.searchContentCard} />
+          <Input
+            onChange={this.changeValueInput}
+            value={valueSearch}
+            type={TypesComponents.TEXT}
+            className={InputClasses.SEARCH}
+          />
         </section>
         <CardBlock contentCard={filterCard} />
         <Sprite />

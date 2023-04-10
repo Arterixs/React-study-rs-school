@@ -1,5 +1,6 @@
+import { IInputProps } from '../../types/interface/props';
 import styles from './input.module.css';
 
-export const Input = ({ type, className, defaultValue }: { type: string; className: string; defaultValue: number }) => (
-  <input type={type} className={styles[className]} defaultValue={defaultValue} />
+export const Input = ({ type, className, ...attrs }: IInputProps) => (
+  <input type={type} className={styles[className]} {...attrs} />
 );

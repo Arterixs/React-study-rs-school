@@ -7,4 +7,5 @@ export interface ISearchState {
 export interface IMainState {
   contentCard: IBirdsCard[];
   filterCard: IBirdsCard[];
+  valueSearch: string;
 }
