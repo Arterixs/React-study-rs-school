@@ -1,13 +1,13 @@
+import { Input } from 'components/input';
+import { Sprite } from 'components/sprite/sprite';
 import { ChangeEvent, Component } from 'react';
-import { Input } from '../../components/input';
-import { Sprite } from '../../components/sprite/sprite';
-import { InputClasses } from '../../types/enums/classes';
-import { TypesComponents } from '../../types/enums/types-components';
-import { IMainProps } from '../../types/interface/props';
-import { IMainState } from '../../types/interface/states';
-import { setCopyBirds } from '../../utils/helpers/copy-elements';
-import { getValueLocalStorage, setItemLocalStorage } from '../../utils/helpers/local-storage-api';
-import { searchCards } from '../../utils/helpers/search-components';
+import { InputClasses } from 'types/enums/classes';
+import { TypesComponents } from 'types/enums/types-components';
+import { IMainProps } from 'types/interface/props';
+import { IMainState } from 'types/interface/states';
+import { setCopyBirds } from 'utils/helpers/copy-elements';
+import { getValueLocalStorage, setItemLocalStorage } from 'utils/helpers/local-storage-api';
+import { searchCards } from 'utils/helpers/search-components';
 import { CardBlock } from './components/card-block';
 import styles from './main.module.css';
 

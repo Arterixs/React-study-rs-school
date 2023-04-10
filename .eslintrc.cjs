@@ -37,6 +37,11 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
+  settings: {
+    'import/resolver': {
+      typescript: {},
+    },
+  },
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
     'react/jsx-props-no-spreading': 'off',

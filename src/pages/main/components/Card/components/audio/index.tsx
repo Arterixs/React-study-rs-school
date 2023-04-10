@@ -1,15 +1,12 @@
+import { Button } from 'components/button';
+import { Svg } from 'components/svg';
 import { Component } from 'react';
-import { Button } from '../../../../../../components/button';
-import { Svg } from '../../../../../../components/svg';
-import { ButtonClasses, SVGClasses } from '../../../../../../types/enums/classes';
-import { SvgId } from '../../../../../../types/enums/svg';
+import { ButtonClasses, SVGClasses } from 'types/enums/classes';
+import { SvgId } from 'types/enums/svg';
+import { IAudioState } from 'types/interface/states';
 import { Control } from '../control';
 
-interface AudioState {
-  stateBtn: boolean;
-}
-
-export class Audio extends Component<Readonly<unknown>, AudioState> {
+export class Audio extends Component<Readonly<unknown>, IAudioState> {
   private handleClick: () => void;
 
   constructor(props: Readonly<unknown>) {

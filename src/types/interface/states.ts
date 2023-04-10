@@ -9,3 +9,7 @@ export interface IMainState {
   filterCard: IBirdsCard[];
   valueSearch: string;
 }
+
+export interface IAudioState {
+  stateBtn: boolean;
+}

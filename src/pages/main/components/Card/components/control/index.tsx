@@ -1,6 +1,6 @@
-import { Input } from '../../../../../../components/input';
-import { InputClasses } from '../../../../../../types/enums/classes';
-import { TypesComponents } from '../../../../../../types/enums/types-components';
+import { Input } from 'components/input';
+import { InputClasses } from 'types/enums/classes';
+import { TypesComponents } from 'types/enums/types-components';
 import styles from './control.module.css';
 
 export const Control = ({ stateBtn }: { stateBtn: boolean }) => (

@@ -1,4 +1,4 @@
-import { ICardBlockProps } from '../../../../types/interface/props';
+import { ICardBlockProps } from 'types/interface/props';
 import { Card } from '../card';
 import styles from './card-block.module.css';
 
