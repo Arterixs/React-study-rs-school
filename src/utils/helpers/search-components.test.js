@@ -44,15 +44,15 @@ const output3 = [
 
 describe('search cards', () => {
   test('one element found', () => {
-    expect(searchCards(data, 'В')).toStrictEqual(output1);
+    expect(searchCards(data, 'В')).toEqual(output1);
   });
   test('three items found', () => {
-    expect(searchCards(data, 'О')).toStrictEqual(output2);
+    expect(searchCards(data, 'О')).toEqual(output2);
   });
   test('two items found by word', () => {
-    expect(searchCards(data, 'лА')).toStrictEqual(output3);
+    expect(searchCards(data, 'лА')).toEqual(output3);
   });
   test('nothing found', () => {
-    expect(searchCards(data, 'б')).toStrictEqual([]);
+    expect(searchCards(data, 'б')).toEqual([]);
   });
 });

@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { IButtonProps } from '../../types/interface/props';
 import styles from './btn.module.css';
 

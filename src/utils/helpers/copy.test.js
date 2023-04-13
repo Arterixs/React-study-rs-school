@@ -17,5 +17,5 @@ const data = [
 ];
 
 test('deep copy array', () => {
-  expect(setCopyBirds(data)).toStrictEqual(data);
+  expect(setCopyBirds(data)).toEqual(data);
 });

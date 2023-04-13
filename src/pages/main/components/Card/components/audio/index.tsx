@@ -7,16 +7,17 @@ import { IAudioState } from 'types/interface/states';
 import { Control } from '../control';
 
 export class Audio extends Component<Readonly<unknown>, IAudioState> {
-  private handleClick: () => void;
-
   constructor(props: Readonly<unknown>) {
     super(props);
     this.state = {
       stateBtn: false,
     };
-    const { stateBtn } = this.state;
-    this.handleClick = () => this.setState({ stateBtn: !stateBtn });
   }
+
+  handleClick = () => {
+    const { stateBtn } = this.state;
+    this.setState({ stateBtn: !stateBtn });
+  };
 
   render() {
     const { stateBtn } = this.state;

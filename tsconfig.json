@@ -15,7 +15,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["vite/client", "jest"],
+    "types": ["vite/client", "jest", "@testing-library/jest-dom", "@testing-library/react"],
     "baseUrl": "src",
     "paths": {
       "components/*": ["components/*"],
@@ -24,6 +24,6 @@
       "utils/*": ["utils/*"]
     }
   },
-  "include": [".eslintrc.cjs", "src"],
+  "include": [".eslintrc.cjs", "src", "setupTests.js"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
