@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { NotFound } from 'pages/not-found/Not-found';
 import { Layout } from 'pages/layout/Layout';
 import { Main } from 'pages/main/Main';
