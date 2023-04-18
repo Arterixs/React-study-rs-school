@@ -1,14 +1,14 @@
-import { AboutCard } from './components/about';
+import { ICardProps } from 'types/interface/props';
+import { ImageCard } from './components/image';
 import { Audio } from './components/audio';
 import { Description } from './components/description';
-import { ImageCard } from './components/image';
-import { ICardProps } from '../../../../types/interface/props';
+import { AboutCard } from './components/about';
 import styles from './card.module.css';
 
 export const Card = ({ item }: ICardProps) => {
   const { image, name, description, species } = item;
   return (
-    <article className={styles.card}>
+    <article className={styles.card} data-testid='card'>
       <section className={styles.content}>
         <ImageCard {...{ image }} {...{ name }} />
         <AboutCard {...{ name }} {...{ species }} />

@@ -1,6 +1,6 @@
 import { ICardBlockProps } from 'types/interface/props';
-import { Card } from '../card';
 import styles from './card-block.module.css';
+import { Card } from '../Card';
 
 export const CardBlock = ({ contentCard }: ICardBlockProps) => (
   <section className={styles['card-block']}>

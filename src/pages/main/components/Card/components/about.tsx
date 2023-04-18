@@ -3,7 +3,9 @@ import styles from './about-card.module.css';
 
 export const AboutCard = ({ name, species }: IAboutCardProps) => (
   <section className={styles.about}>
-    <h2 className={styles.name}>{name}</h2>
+    <h2 className={styles.name} data-testid='title_card'>
+      {name}
+    </h2>
     <p className={styles.common}>{species}</p>
     <p className={styles.family}>Лесные птицы</p>
   </section>

@@ -1,10 +1,10 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { About } from '../pages/about/about';
-import { Layout } from '../pages/layout/layout';
-import { Main } from '../pages/main/main';
-import { NotFound } from '../pages/not-found/not-found';
-import { Routers } from '../types/enums/routers';
-import { birdsData } from '../store/data';
+import { NotFound } from 'pages/not-found/Not-found';
+import { Layout } from 'pages/layout/Layout';
+import { Main } from 'pages/main/Main';
+import { About } from 'pages/about/About';
+import { Routers } from 'types/enums/routers';
+import { birdsData } from 'store/data';
 
 export const App = () => (
   <Routes>

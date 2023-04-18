@@ -29,12 +29,12 @@ export class Main extends Component<IMainProps, IMainState> {
     setItemLocalStorage(valueSearch);
   }
 
-  changeValueInput = (e: ChangeEvent<HTMLInputElement>) => {
+  private changeValueInput = (e: ChangeEvent<HTMLInputElement>) => {
     const resultSearch = this.searchContentCard(e.target.value);
     this.setState({ filterCard: resultSearch, valueSearch: e.target.value });
   };
 
-  searchContentCard(stateInput: string) {
+  private searchContentCard(stateInput: string) {
     const { contentCard } = this.state;
     const copyContentCard = setCopyBirds(contentCard);
     return searchCards(copyContentCard, stateInput);
