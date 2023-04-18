@@ -15,7 +15,13 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["vite/client", "jest", "@testing-library/jest-dom", "@testing-library/react"],
+    "types": [
+      "vite/client",
+      "jest",
+      "@testing-library/jest-dom",
+      "@testing-library/react",
+      "@testing-library/user-event"
+    ],
     "baseUrl": "src",
     "paths": {
       "components/*": ["components/*"],
