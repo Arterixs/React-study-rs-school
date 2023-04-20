@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, SyntheticEvent } from 'react';
 import { Input } from 'components/input';
 import { InputTypes } from 'types/enums/types-components';
 import { InputClasses } from 'types/enums/classes';
@@ -15,6 +15,8 @@ export class Form extends Component<unknown> {
 
   private agree: React.RefObject<HTMLInputElement>;
 
+  private sex: React.RefObject<HTMLInputElement>;
+
   private file: React.RefObject<HTMLInputElement>;
 
   constructor(props: unknown) {
@@ -24,12 +26,25 @@ export class Form extends Component<unknown> {
     this.birthday = React.createRef();
     this.country = React.createRef();
     this.agree = React.createRef();
+    this.sex = React.createRef();
     this.file = React.createRef();
   }
 
+  handleClick = (e: SyntheticEvent) => {
+    e.preventDefault();
+    const obj = {
+      firstName: this.firstName.current?.value,
+      lastName: this.lastName.current?.value,
+      birthday: this.birthday.current?.value,
+      country: this.country.current?.value,
+      agree: this.agree.current?.checked,
+    };
+    console.log(this.sex.current?.value);
+  };
+
   render() {
     return (
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={this.handleClick}>
         <fieldset className={styles.fieldset}>
           <legend className={styles.legend}>Info user</legend>
           <label className={styles.label}>
@@ -53,7 +68,7 @@ export class Form extends Component<unknown> {
           <label className={styles.label}>
             Country of Residence
             <select name='Country' id='' ref={this.country}>
-              <option value='vplvo'>Volvo</option>
+              <option value='volvo'>Volvo</option>
             </select>
           </label>
         </fieldset>
@@ -68,11 +83,23 @@ export class Form extends Component<unknown> {
           <legend className={styles.legend}>Sex</legend>
           <label className={styles.label}>
             Male
-            <Input type={InputTypes.RADIO} className={InputClasses.RADIO} name='male' />
+            <Input
+              type={InputTypes.RADIO}
+              className={InputClasses.RADIO}
+              name='sex'
+              ref={this.sex}
+              defaultValue='male'
+            />
           </label>
           <label className={styles.label}>
             Female
-            <Input type={InputTypes.RADIO} className={InputClasses.RADIO} name='female' />
+            <Input
+              type={InputTypes.RADIO}
+              className={InputClasses.RADIO}
+              name='sex'
+              ref={this.sex}
+              defaultValue='female'
+            />
           </label>
         </fieldset>
         <fieldset className={styles.fieldset}>
@@ -82,6 +109,7 @@ export class Form extends Component<unknown> {
             <Input type={InputTypes.FILE} className={InputClasses.FILE} name='file' ref={this.file} />
           </label>
         </fieldset>
+        <button type='submit'>Submit</button>
       </form>
     );
   }
