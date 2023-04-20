@@ -44,6 +44,12 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
+    'jsx-a11y/label-has-associated-control': [
+      2,
+      {
+        controlComponents: ['Input'],
+      },
+    ],
     'react/jsx-props-no-spreading': 'off',
     'import/no-default-export': 'off',
     'import/prefer-default-export': 'off',

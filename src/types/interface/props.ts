@@ -1,6 +1,6 @@
 import { ChangeEvent } from 'react';
 import { ButtonClasses, InputClasses } from '../enums/classes';
-import { TypesComponents } from '../enums/types-components';
+import { InputTypes } from '../enums/types-components';
 import { IBirdsCard } from './card';
 
 export interface IAboutCardProps {
@@ -36,9 +36,11 @@ export interface ICardProps {
 }
 
 export interface IInputProps {
-  type: TypesComponents;
+  type: InputTypes;
   className: InputClasses;
   defaultValue?: number | string;
   value?: string | number;
+  name?: string;
+  ref?: React.RefObject<HTMLInputElement>;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
