@@ -1,6 +1,5 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable react/no-unused-state */
 import React, { Component, SyntheticEvent } from 'react';
+import { convertDate } from 'utils/helpers/form';
 import { Input } from 'components/input';
 import { InputTypes } from 'types/enums/types-components';
 import { InputClasses } from 'types/enums/classes';
@@ -15,6 +14,28 @@ interface IFormState {
   errorGender: boolean;
   errorFile: boolean;
 }
+
+interface IValueFieldsForm {
+  firstName: string | undefined;
+  lastName: string | undefined;
+  birthday: string;
+  agree: boolean | undefined;
+  image: string | undefined;
+  country: string | undefined;
+  gender: React.RefObject<HTMLInputElement> | undefined;
+}
+
+const enum IFieldsForm {
+  FIRSTNAME = 'firstName',
+  LASTNAME = 'lastName',
+  BIRTHDAY = 'birthday',
+  COUNTRY = 'country',
+  AGREE = 'agree',
+  GENDER = 'gender',
+  IMAGE = 'image',
+}
+
+type PropsValueValidationField = string | boolean | undefined | React.RefObject<HTMLInputElement>;
 
 export class Form extends Component<unknown, IFormState> {
   private firstName: React.RefObject<HTMLInputElement>;
@@ -59,128 +80,100 @@ export class Form extends Component<unknown, IFormState> {
 
   private findGenderCheck = () => this.arrayGender.find((ref) => ref.current?.checked);
 
-  private validateFirstName = (value: string | undefined) => {
+  private validationFields = (value: PropsValueValidationField, field: IFieldsForm) => {
     if (value) {
-      this.setState({ errorFirstName: false });
+      switch (field) {
+        case IFieldsForm.FIRSTNAME:
+          this.setState({ errorFirstName: false });
+          break;
+        case IFieldsForm.LASTNAME:
+          this.setState({ errorLastName: false });
+          break;
+        case IFieldsForm.COUNTRY:
+          this.setState({ errorCountry: false });
+          break;
+        case IFieldsForm.IMAGE:
+          this.setState({ errorFile: false });
+          break;
+        case IFieldsForm.GENDER:
+          this.setState({ errorGender: false });
+          break;
+        case IFieldsForm.BIRTHDAY:
+          this.setState({ errorBirthday: false });
+          break;
+        case IFieldsForm.AGREE:
+          this.setState({ errorAgree: false });
+          break;
+        default:
+          throw Error("Field doesn't valid");
+      }
       return true;
     }
-    this.setState({ errorFirstName: true });
-    return false;
-  };
-
-  private validateLastName = (value: string | undefined) => {
-    if (value) {
-      this.setState({ errorLastName: false });
-      return true;
-    }
-    this.setState({ errorLastName: true });
-    return false;
-  };
-
-  private validateBirthday = (value: string | undefined) => {
-    if (value) {
-      this.setState({ errorBirthday: false });
-      return true;
-    }
-    this.setState({ errorBirthday: true });
-    return false;
-  };
-
-  private validateGender = (value: React.RefObject<HTMLInputElement> | undefined) => {
-    if (value) {
-      this.setState({ errorGender: false });
-      return true;
-    }
-    this.setState({ errorGender: true });
-    return false;
-  };
-
-  private validateAgree = (value: boolean | undefined) => {
-    if (value) {
-      this.setState({ errorAgree: false });
-      return true;
-    }
-    this.setState({ errorAgree: true });
-    return false;
-  };
-
-  private validateFile = (value: string | undefined) => {
-    if (value) {
-      this.setState({ errorFile: false });
-      return true;
-    }
-    this.setState({ errorFile: true });
-    return false;
-  };
-
-  private validateCountry = (value: string | undefined) => {
-    if (value) {
-      this.setState({ errorCountry: false });
-      return true;
-    }
-    this.setState({ errorCountry: true });
-    return false;
-  };
-
-  private convertCheck = () => {
-    const arrayValidation = [];
-    const valueFirstName = this.firstName.current?.value;
-    const valueLastName = this.lastName.current?.value;
-    const valueBirthday = this.birthday.current?.value;
-    const valueAgree = this.agree.current?.checked;
-    const valueFile = this.file.current?.value;
-    const valueCountry = this.country.current?.value;
-    const checkedGender = this.findGenderCheck();
-
-    const isFirstField = this.validateFirstName(valueFirstName);
-    arrayValidation.push(isFirstField);
-    const isSecondField = this.validateLastName(valueLastName);
-    arrayValidation.push(isSecondField);
-    const isThreesField = this.validateBirthday(valueBirthday);
-    arrayValidation.push(isThreesField);
-    const isFourField = this.validateGender(checkedGender);
-    arrayValidation.push(isFourField);
-    const isFiveField = this.validateAgree(valueAgree);
-    arrayValidation.push(isFiveField);
-    const isSixField = this.validateFile(valueFile);
-    arrayValidation.push(isSixField);
-    const isSevenField = this.validateCountry(valueCountry);
-    arrayValidation.push(isSevenField);
-
-    const checkValidation = arrayValidation.find((item) => item === false);
-    if (checkValidation === undefined) {
-      return true;
+    switch (field) {
+      case IFieldsForm.FIRSTNAME:
+        this.setState({ errorFirstName: true });
+        break;
+      case IFieldsForm.LASTNAME:
+        this.setState({ errorLastName: true });
+        break;
+      case IFieldsForm.COUNTRY:
+        this.setState({ errorCountry: true });
+        break;
+      case IFieldsForm.IMAGE:
+        this.setState({ errorFile: true });
+        break;
+      case IFieldsForm.GENDER:
+        this.setState({ errorGender: true });
+        break;
+      case IFieldsForm.BIRTHDAY:
+        this.setState({ errorBirthday: true });
+        break;
+      case IFieldsForm.AGREE:
+        this.setState({ errorAgree: true });
+        break;
+      default:
+        throw Error("Field doesn't valid");
     }
     return false;
   };
 
-  private createObjectCards = () => {
-    const sex = this.findGenderCheck();
-    const date = this.convertDate('s');
-    return {
-      firstName: this.firstName.current?.value,
-      lastName: this.lastName.current?.value,
-      birthday: date,
-      country: this.country.current?.value,
-      gender: sex?.current?.value,
-      agree: this.agree.current?.checked,
-    };
+  private getObjectValueFierld = () => ({
+    firstName: this.firstName.current?.value,
+    lastName: this.lastName.current?.value,
+    birthday: convertDate(this.birthday.current?.value),
+    agree: this.agree.current?.checked,
+    image: this.file.current?.value,
+    country: this.country.current?.value,
+    gender: this.findGenderCheck(),
+  });
+
+  private checkValidation = (objectFields: IValueFieldsForm) => {
+    const { firstName, lastName, birthday, agree, image, country, gender } = objectFields;
+
+    const isFirstField = this.validationFields(firstName, IFieldsForm.FIRSTNAME);
+    const isSecondField = this.validationFields(lastName, IFieldsForm.LASTNAME);
+    const isThreesField = this.validationFields(birthday, IFieldsForm.BIRTHDAY);
+    const isFourField = this.validationFields(gender, IFieldsForm.GENDER);
+    const isFiveField = this.validationFields(agree, IFieldsForm.AGREE);
+    const isSixField = this.validationFields(image, IFieldsForm.IMAGE);
+    const isSevenField = this.validationFields(country, IFieldsForm.COUNTRY);
+
+    const arrayField = [isFirstField, isSecondField, isThreesField, isFourField, isFiveField, isSixField, isSevenField];
+
+    const isCheckValidation = arrayField.find((item) => item === false);
+    if (isCheckValidation === undefined) {
+      return true;
+    }
+    return false;
   };
 
   private handleClick = (e: SyntheticEvent) => {
     e.preventDefault();
-    const validation = this.convertCheck();
-    if (validation) {
+    const objectFields = this.getObjectValueFierld();
+    const isValid = this.checkValidation(objectFields);
+    if (isValid) {
       alert('Okay');
     }
-    const object = this.createObjectCards();
-  };
-
-  private convertDate = (value: string | undefined) => {
-    if (value) {
-      return new Date(value);
-    }
-    return false;
   };
 
   render() {
@@ -192,12 +185,22 @@ export class Form extends Component<unknown, IFormState> {
           <legend className={styles.legend}>Info user</legend>
           <label className={styles.label}>
             FirstName
-            <Input type={InputTypes.TEXT} className={InputClasses.FORM_TEXT} name='firstName' ref={this.firstName} />
+            <Input
+              type={InputTypes.TEXT}
+              className={InputClasses.FORM_TEXT}
+              name={IFieldsForm.FIRSTNAME}
+              ref={this.firstName}
+            />
           </label>
           {errorFirstName && <p style={{ color: 'red', fontSize: '26px' }}>Поле не может быть пустым</p>}
           <label className={styles.label}>
             LastName
-            <Input type={InputTypes.TEXT} className={InputClasses.FORM_TEXT} name='lastName' ref={this.lastName} />
+            <Input
+              type={InputTypes.TEXT}
+              className={InputClasses.FORM_TEXT}
+              name={IFieldsForm.LASTNAME}
+              ref={this.lastName}
+            />
           </label>
           {errorLastName && <p style={{ color: 'red', fontSize: '26px' }}>Поле не может быть пустым</p>}
         </fieldset>
@@ -205,7 +208,12 @@ export class Form extends Component<unknown, IFormState> {
           <legend className={styles.legend}>Birthday</legend>
           <label className={styles.label}>
             Date of Birth
-            <Input type={InputTypes.DATE} className={InputClasses.FORM_BIRTHDAY} name='birthday' ref={this.birthday} />
+            <Input
+              type={InputTypes.DATE}
+              className={InputClasses.FORM_BIRTHDAY}
+              name={IFieldsForm.BIRTHDAY}
+              ref={this.birthday}
+            />
           </label>
           {errorBirthday && <p style={{ color: 'red', fontSize: '26px' }}>Заполни дату</p>}
         </fieldset>
@@ -213,7 +221,7 @@ export class Form extends Component<unknown, IFormState> {
           <legend className={styles.legend}>Country</legend>
           <label className={styles.label}>
             Country of Residence
-            <select name='Country' ref={this.country}>
+            <select name={IFieldsForm.COUNTRY} ref={this.country}>
               <option value=''>-- choose a country --</option>
               <option value='USA'>USA</option>
               <option value='England'>England</option>
@@ -227,7 +235,12 @@ export class Form extends Component<unknown, IFormState> {
           <legend className={styles.legend}>Agree</legend>
           <label className={styles.label}>
             Consent to account processing
-            <Input type={InputTypes.CHECKBOX} className={InputClasses.CHECKBOX} name='agree' ref={this.agree} />
+            <Input
+              type={InputTypes.CHECKBOX}
+              className={InputClasses.CHECKBOX}
+              name={IFieldsForm.AGREE}
+              ref={this.agree}
+            />
           </label>
           {errorAgree && <p style={{ color: 'red', fontSize: '26px' }}>Поставь галку</p>}
         </fieldset>
@@ -235,11 +248,23 @@ export class Form extends Component<unknown, IFormState> {
           <legend className={styles.legend}>Sex</legend>
           <label className={styles.label}>
             Male
-            <Input type={InputTypes.RADIO} className={InputClasses.RADIO} name='sex' ref={this.male} value='male' />
+            <Input
+              type={InputTypes.RADIO}
+              className={InputClasses.RADIO}
+              name={IFieldsForm.GENDER}
+              ref={this.male}
+              value='male'
+            />
           </label>
           <label className={styles.label}>
             Female
-            <Input type={InputTypes.RADIO} className={InputClasses.RADIO} name='sex' ref={this.female} value='female' />
+            <Input
+              type={InputTypes.RADIO}
+              className={InputClasses.RADIO}
+              name={IFieldsForm.GENDER}
+              ref={this.female}
+              value='female'
+            />
           </label>
           {errorGender && <p style={{ color: 'red', fontSize: '26px' }}>Сделай выбор</p>}
         </fieldset>
@@ -247,7 +272,13 @@ export class Form extends Component<unknown, IFormState> {
           <legend className={styles.legend}>Photo</legend>
           <label className={styles.label}>
             Upload image
-            <Input type={InputTypes.FILE} className={InputClasses.FILE} name='file' ref={this.file} accept='image/*' />
+            <Input
+              type={InputTypes.FILE}
+              className={InputClasses.FILE}
+              name={IFieldsForm.IMAGE}
+              ref={this.file}
+              accept='image/*'
+            />
           </label>
           {errorFile && <p style={{ color: 'red', fontSize: '26px' }}>Вложи файл</p>}
         </fieldset>
