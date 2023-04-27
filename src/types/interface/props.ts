@@ -41,6 +41,8 @@ export interface IInputProps {
   defaultValue?: number | string;
   value?: string | number;
   name?: string;
+  required?: boolean;
   ref?: React.RefObject<HTMLInputElement>;
+  accept?: string;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
