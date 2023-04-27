@@ -1,6 +1,7 @@
 import React, { Component, SyntheticEvent } from 'react';
 import { convertDate } from 'utils/helpers/form';
 import { Input } from 'components/input';
+import { Hint } from 'components/hint';
 import { InputTypes } from 'types/enums/types-components';
 import { IFieldsForm } from 'types/enums/form';
 import { IFormState, IValueFieldsForm } from 'types/interface/form';
@@ -163,7 +164,7 @@ export class Form extends Component<unknown, IFormState> {
               ref={this.firstName}
             />
           </label>
-          {errorFirstName && <p style={{ color: 'red', fontSize: '26px' }}>Поле не может быть пустым</p>}
+          {errorFirstName && <Hint value='Поле не может быть пустым' />}
           <label className={styles.label}>
             LastName
             <Input
@@ -173,7 +174,7 @@ export class Form extends Component<unknown, IFormState> {
               ref={this.lastName}
             />
           </label>
-          {errorLastName && <p style={{ color: 'red', fontSize: '26px' }}>Поле не может быть пустым</p>}
+          {errorLastName && <Hint value='Поле не может быть пустым' />}
         </fieldset>
         <fieldset className={styles.fieldset}>
           <legend className={styles.legend}>Birthday</legend>
@@ -186,7 +187,7 @@ export class Form extends Component<unknown, IFormState> {
               ref={this.birthday}
             />
           </label>
-          {errorBirthday && <p style={{ color: 'red', fontSize: '26px' }}>Заполни дату</p>}
+          {errorBirthday && <Hint value='Заполни дату' />}
         </fieldset>
         <fieldset className={styles.fieldset}>
           <legend className={styles.legend}>Country</legend>
@@ -200,7 +201,7 @@ export class Form extends Component<unknown, IFormState> {
               <option value='Russia'>Russia</option>
             </select>
           </label>
-          {errorCountry && <p style={{ color: 'red', fontSize: '26px' }}>Выбери страну</p>}
+          {errorCountry && <Hint value='Выбери страну' />}
         </fieldset>
         <fieldset className={styles.fieldset}>
           <legend className={styles.legend}>Agree</legend>
@@ -213,7 +214,7 @@ export class Form extends Component<unknown, IFormState> {
               ref={this.agree}
             />
           </label>
-          {errorAgree && <p style={{ color: 'red', fontSize: '26px' }}>Поставь галку</p>}
+          {errorAgree && <Hint value='Поставь галку' />}
         </fieldset>
         <fieldset className={styles.fieldset}>
           <legend className={styles.legend}>Sex</legend>
@@ -237,7 +238,7 @@ export class Form extends Component<unknown, IFormState> {
               value='female'
             />
           </label>
-          {errorGender && <p style={{ color: 'red', fontSize: '26px' }}>Сделай выбор</p>}
+          {errorGender && <Hint value='сделай выбор' />}
         </fieldset>
         <fieldset className={styles.fieldset}>
           <legend className={styles.legend}>Photo</legend>
@@ -251,7 +252,7 @@ export class Form extends Component<unknown, IFormState> {
               accept='image/*'
             />
           </label>
-          {errorFile && <p style={{ color: 'red', fontSize: '26px' }}>Вложи файл</p>}
+          {errorFile && <Hint value='Вложи файл' />}
         </fieldset>
         <button type='submit'>Submit</button>
       </form>
