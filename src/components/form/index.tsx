@@ -2,40 +2,11 @@ import React, { Component, SyntheticEvent } from 'react';
 import { convertDate } from 'utils/helpers/form';
 import { Input } from 'components/input';
 import { InputTypes } from 'types/enums/types-components';
+import { IFieldsForm } from 'types/enums/form';
+import { IFormState, IValueFieldsForm } from 'types/interface/form';
+import { PropsValueValidationField } from 'types/type/form';
 import { InputClasses } from 'types/enums/classes';
 import styles from './form.module.css';
-
-interface IFormState {
-  errorFirstName: boolean;
-  errorLastName: boolean;
-  errorBirthday: boolean;
-  errorCountry: boolean;
-  errorAgree: boolean;
-  errorGender: boolean;
-  errorFile: boolean;
-}
-
-interface IValueFieldsForm {
-  firstName: string | undefined;
-  lastName: string | undefined;
-  birthday: string;
-  agree: boolean | undefined;
-  image: string | undefined;
-  country: string | undefined;
-  gender: React.RefObject<HTMLInputElement> | undefined;
-}
-
-const enum IFieldsForm {
-  FIRSTNAME = 'firstName',
-  LASTNAME = 'lastName',
-  BIRTHDAY = 'birthday',
-  COUNTRY = 'country',
-  AGREE = 'agree',
-  GENDER = 'gender',
-  IMAGE = 'image',
-}
-
-type PropsValueValidationField = string | boolean | undefined | React.RefObject<HTMLInputElement>;
 
 export class Form extends Component<unknown, IFormState> {
   private firstName: React.RefObject<HTMLInputElement>;
