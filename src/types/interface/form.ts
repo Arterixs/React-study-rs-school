@@ -17,3 +17,13 @@ export interface IValueFieldsForm {
   country: string | undefined;
   gender: React.RefObject<HTMLInputElement> | undefined;
 }
+
+export interface IOption {
+  option: ICountry[];
+}
+
+export interface ICountry {
+  value: string;
+  id: number;
+  text: string;
+}

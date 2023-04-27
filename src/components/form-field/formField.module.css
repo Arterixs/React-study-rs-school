@@ -1,0 +1,16 @@
+.label {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-family: 'Montserrat-reg';
+  font-size: 18px;
+  color: bisque;
+}
+
+.legend {
+  font-family: var(--font-regular);
+  color: #03ff66;
+  margin-bottom: 10px;
+  font-size: 22px;
+  text-align: center;
+}
