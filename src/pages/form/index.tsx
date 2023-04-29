@@ -1,13 +1,40 @@
+import { Component } from 'react';
 import { Form } from 'components/form';
-import { IOption } from 'types/interface/form';
+import { IFromPageState, IPropsForm, IValueFieldsForm } from 'types/interface/form';
+import { CardForm } from 'components/card-form';
 import styles from './form.module.css';
 
-export const FormPage = (props: IOption) => {
-  const { option } = props;
-  return (
-    <section className={styles.container}>
-      <p data-testid='about-page'>Form</p>
-      <Form option={option} />
-    </section>
-  );
-};
+export class FormPage extends Component<IPropsForm, IFromPageState> {
+  count: number;
+
+  constructor(props: IPropsForm) {
+    super(props);
+    this.count = 0;
+    this.state = {
+      arrayCards: [],
+    };
+  }
+
+  setCard = (object: IValueFieldsForm) => {
+    this.count = 0;
+    const { arrayCards } = this.state;
+    const arrayCopy = arrayCards.slice();
+    arrayCopy.push(object);
+    this.setState({ arrayCards: arrayCopy });
+  };
+
+  render() {
+    const { option } = this.props;
+    const { arrayCards } = this.state;
+    return (
+      <section className={styles.container}>
+        <p data-testid='about-page'>Form</p>
+        <Form option={option} setCard={this.setCard} />
+        {arrayCards.map((item) => {
+          this.count += 1;
+          return <CardForm data={item} key={this.count} />;
+        })}
+      </section>
+    );
+  }
+}

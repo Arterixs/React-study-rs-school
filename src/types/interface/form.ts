@@ -15,11 +15,16 @@ export interface IValueFieldsForm {
   agree: boolean | undefined;
   image: string | undefined;
   country: string | undefined;
-  gender: React.RefObject<HTMLInputElement> | undefined;
+  gender: string | undefined;
 }
 
-export interface IOption {
+export interface IFromPageState {
+  arrayCards: IValueFieldsForm[] | [];
+}
+
+export interface IPropsForm {
   option: ICountry[];
+  setCard: (object: IValueFieldsForm) => void;
 }
 
 export interface ICountry {

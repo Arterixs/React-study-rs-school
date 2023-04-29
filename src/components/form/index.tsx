@@ -4,14 +4,14 @@ import { Input } from 'components/input';
 import { Hint } from 'components/hint';
 import { InputTypes } from 'types/enums/types-components';
 import { IFieldsForm } from 'types/enums/form';
-import { ICountry, IFormState, IOption, IValueFieldsForm } from 'types/interface/form';
+import { ICountry, IFormState, IPropsForm, IValueFieldsForm } from 'types/interface/form';
 import { FormField } from 'components/form-field';
 import { PropsValueValidationField } from 'types/type/form';
 import { FormLabel } from 'components/form-field/form-label';
 import { InputClasses } from 'types/enums/classes';
 import styles from './form.module.css';
 
-export class Form extends Component<IOption, IFormState> {
+export class Form extends Component<IPropsForm, IFormState> {
   private firstName: React.RefObject<HTMLInputElement>;
 
   private lastName: React.RefObject<HTMLInputElement>;
@@ -28,11 +28,13 @@ export class Form extends Component<IOption, IFormState> {
 
   private file: React.RefObject<HTMLInputElement>;
 
+  private form: React.RefObject<HTMLFormElement>;
+
   private arrayGender: React.RefObject<HTMLInputElement>[];
 
   private option: ICountry[];
 
-  constructor(props: { option: ICountry[] }) {
+  constructor(props: IPropsForm) {
     super(props);
     this.firstName = React.createRef();
     this.lastName = React.createRef();
@@ -42,6 +44,7 @@ export class Form extends Component<IOption, IFormState> {
     this.male = React.createRef();
     this.female = React.createRef();
     this.file = React.createRef();
+    this.form = React.createRef();
     this.arrayGender = [this.male, this.female];
     this.option = props.option;
     this.state = {
@@ -55,7 +58,7 @@ export class Form extends Component<IOption, IFormState> {
     };
   }
 
-  private findGenderCheck = () => this.arrayGender.find((ref) => ref.current?.checked);
+  private findGenderCheck = () => this.arrayGender.find((ref) => ref.current?.checked)?.current?.value;
 
   private validationFields = (value: PropsValueValidationField, field: IFieldsForm) => {
     if (value) {
@@ -149,7 +152,15 @@ export class Form extends Component<IOption, IFormState> {
     const objectFields = this.getObjectValueFierld();
     const isValid = this.checkValidation(objectFields);
     if (isValid) {
-      alert('Okay');
+      const { setCard } = this.props;
+      setCard(objectFields);
+      this.clearForm();
+    }
+  };
+
+  private clearForm = () => {
+    if (this.form.current) {
+      this.form.current.reset();
     }
   };
 
@@ -157,7 +168,7 @@ export class Form extends Component<IOption, IFormState> {
     const { errorFirstName, errorLastName, errorBirthday, errorGender, errorAgree, errorFile, errorCountry } =
       this.state;
     return (
-      <form className={styles.form} onSubmit={this.handleClick}>
+      <form className={styles.form} onSubmit={this.handleClick} ref={this.form}>
         <fieldset className={styles.fieldset}>
           <FormField legendName='Info user'>
             <FormLabel labelName='FirstName'>
