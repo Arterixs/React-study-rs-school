@@ -1,16 +1,19 @@
-import { Date } from 'types/type/form';
+import { DateCalendar } from 'types/type/form';
+import { INDEX_ALIGMENT_MONTH, NUMBER_TEN, NUMBER_ZERO } from 'utils/constants/other';
 
-export const convertDate = (value: string | undefined) => (value ? JSON.stringify(new Date(value)) : '');
+export const convertDate = (value: string | undefined) => (value ? JSON.stringify(new Date(value)) : null);
 
 export const getYearDayMonth = (dateString: string) => {
   const getDate = new Date(dateString);
-  let month: Date = getDate.getMonth();
-  let day: Date = getDate.getDate();
-  if (month < 10) {
-    month = `0${month}`;
+  let month: DateCalendar = getDate.getMonth() + INDEX_ALIGMENT_MONTH;
+  let day: DateCalendar = getDate.getDate();
+  if (month < NUMBER_TEN) {
+    month = `${NUMBER_ZERO}${month}`;
   }
-  if (day < 10) {
-    day = `0${day}`;
+  if (day < NUMBER_TEN) {
+    day = `${NUMBER_ZERO}${day}`;
   }
   return `${day}.${month}.${getDate.getFullYear()}`;
 };
+
+export const checkedFileImage = (value: null | FileList | undefined) => (value ? value[0] : null);

@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Form } from 'components/form';
-import { IFromPageState, IPropsForm, IValueFieldsForm } from 'types/interface/form';
+import { IFromPageState, IPropsForm, IReadyObjectField, IValueFieldsForm } from 'types/interface/form';
 import { CardForm } from 'components/card-form';
 import styles from './form.module.css';
 
@@ -15,7 +15,7 @@ export class FormPage extends Component<IPropsForm, IFromPageState> {
     };
   }
 
-  setCard = (object: IValueFieldsForm) => {
+  private setCard = (object: IReadyObjectField) => {
     this.count = 0;
     const { arrayCards } = this.state;
     const arrayCopy = arrayCards.slice();

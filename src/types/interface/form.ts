@@ -11,20 +11,30 @@ export interface IFormState {
 export interface IValueFieldsForm {
   firstName: string | undefined;
   lastName: string | undefined;
-  birthday: string;
+  birthday: string | null;
   agree: boolean | undefined;
-  image: string | undefined;
+  image: File | null;
   country: string | undefined;
   gender: string | undefined;
 }
 
+export interface IReadyObjectField {
+  firstName: string;
+  lastName: string;
+  birthday: string;
+  agree: true;
+  image: File;
+  country: string;
+  gender: string;
+}
+
 export interface IFromPageState {
-  arrayCards: IValueFieldsForm[] | [];
+  arrayCards: IReadyObjectField[] | [];
 }
 
 export interface IPropsForm {
   option: ICountry[];
-  setCard: (object: IValueFieldsForm) => void;
+  setCard: (object: IReadyObjectField) => void;
 }
 
 export interface ICountry {

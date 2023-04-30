@@ -1,5 +1,5 @@
 import React, { Component, SyntheticEvent } from 'react';
-import { convertDate } from 'utils/helpers/form';
+import { checkedFileImage, convertDate } from 'utils/helpers/form';
 import { Input } from 'components/input';
 import { Hint } from 'components/hint';
 import { InputTypes } from 'types/enums/types-components';
@@ -117,15 +117,18 @@ export class Form extends Component<IPropsForm, IFormState> {
     return false;
   };
 
-  private getObjectValueFierld = () => ({
-    firstName: this.firstName.current?.value,
-    lastName: this.lastName.current?.value,
-    birthday: convertDate(this.birthday.current?.value),
-    agree: this.agree.current?.checked,
-    image: this.file.current?.value,
-    country: this.country.current?.value,
-    gender: this.findGenderCheck(),
-  });
+  private getObjectValueField = () => {
+    const image = checkedFileImage(this.file.current?.files);
+    return {
+      firstName: this.firstName.current?.value,
+      lastName: this.lastName.current?.value,
+      birthday: convertDate(this.birthday.current?.value),
+      agree: this.agree.current?.checked,
+      image,
+      country: this.country.current?.value,
+      gender: this.findGenderCheck(),
+    };
+  };
 
   private checkValidation = (objectFields: IValueFieldsForm) => {
     const { firstName, lastName, birthday, agree, image, country, gender } = objectFields;
@@ -138,31 +141,44 @@ export class Form extends Component<IPropsForm, IFormState> {
     const isSixField = this.validationFields(image, IFieldsForm.IMAGE);
     const isSevenField = this.validationFields(country, IFieldsForm.COUNTRY);
 
-    const arrayField = [isFirstField, isSecondField, isThreesField, isFourField, isFiveField, isSixField, isSevenField];
+    const arrayCheckField = [
+      isFirstField,
+      isSecondField,
+      isThreesField,
+      isFourField,
+      isFiveField,
+      isSixField,
+      isSevenField,
+    ];
 
-    const isCheckValidation = arrayField.find((item) => item === false);
-    if (isCheckValidation === undefined) {
-      return true;
+    const isCheckValidation = arrayCheckField.find((item) => !item);
+
+    if (!isCheckValidation && firstName && lastName && birthday && agree && image && country && gender) {
+      return {
+        firstName,
+        lastName,
+        birthday,
+        gender,
+        agree,
+        image,
+        country,
+      };
     }
     return false;
   };
 
   private handleClick = (e: SyntheticEvent) => {
     e.preventDefault();
-    const objectFields = this.getObjectValueFierld();
-    const isValid = this.checkValidation(objectFields);
-    if (isValid) {
+    const objectFields = this.getObjectValueField();
+    const getValidObject = this.checkValidation(objectFields);
+    if (getValidObject) {
       const { setCard } = this.props;
-      setCard(objectFields);
+      setCard(getValidObject);
       this.clearForm();
     }
   };
 
-  private clearForm = () => {
-    if (this.form.current) {
-      this.form.current.reset();
-    }
-  };
+  private clearForm = () => this.form.current?.reset();
 
   render() {
     const { errorFirstName, errorLastName, errorBirthday, errorGender, errorAgree, errorFile, errorCountry } =

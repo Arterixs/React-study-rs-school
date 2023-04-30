@@ -1,3 +1,3 @@
-export type PropsValueValidationField = string | boolean | undefined | React.RefObject<HTMLInputElement>;
+export type PropsValueValidationField = string | boolean | undefined | React.RefObject<HTMLInputElement> | File | null;
 
-export type Date = string | number;
+export type DateCalendar = string | number;
