@@ -9,6 +9,6 @@ interface IFormFieldProps {
 export const FormLabel = ({ labelName, children }: IFormFieldProps) => (
   <label className={styles.label}>
     {labelName}
-    {children}
+    <div className={styles['wrapper-input']}>{children}</div>
   </label>
 );

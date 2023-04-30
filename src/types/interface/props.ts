@@ -44,5 +44,7 @@ export interface IInputProps {
   required?: boolean;
   ref?: React.RefObject<HTMLInputElement>;
   accept?: string;
+  error?: boolean;
+  id?: string;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }

@@ -1,4 +1,6 @@
 .hint {
-  color: red;
-  font-size: 24px;
+  color: var(--color-error);
+  font-size: 14px;
+  font-family: var(--font-regular);
+  margin-left: 2px;
 }

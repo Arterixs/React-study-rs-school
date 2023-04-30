@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export interface IFormState {
   errorFirstName: boolean;
   errorLastName: boolean;
@@ -41,4 +43,9 @@ export interface ICountry {
   value: string;
   id: number;
   text: string;
+}
+
+export interface IFormFieldProps {
+  legendName: string;
+  children: ReactNode[] | ReactNode;
 }

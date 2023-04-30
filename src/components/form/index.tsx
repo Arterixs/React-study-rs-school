@@ -185,105 +185,96 @@ export class Form extends Component<IPropsForm, IFormState> {
       this.state;
     return (
       <form className={styles.form} onSubmit={this.handleClick} ref={this.form}>
-        <fieldset className={styles.fieldset}>
-          <FormField legendName='Info user'>
-            <FormLabel labelName='FirstName'>
-              <Input
-                type={InputTypes.TEXT}
-                className={InputClasses.FORM_TEXT}
-                name={IFieldsForm.FIRSTNAME}
-                ref={this.firstName}
-              />
-            </FormLabel>
+        <FormField legendName='Username'>
+          <FormLabel labelName='FirstName'>
+            <Input
+              type={InputTypes.TEXT}
+              className={InputClasses.FORM_TEXT}
+              error={errorFirstName}
+              name={IFieldsForm.FIRSTNAME}
+              ref={this.firstName}
+            />
             {errorFirstName && <Hint value='Поле не может быть пустым' />}
-            <FormLabel labelName='LastName'>
-              <Input
-                type={InputTypes.TEXT}
-                className={InputClasses.FORM_TEXT}
-                name={IFieldsForm.LASTNAME}
-                ref={this.lastName}
-              />
-            </FormLabel>
+          </FormLabel>
+          <FormLabel labelName='LastName'>
+            <Input
+              type={InputTypes.TEXT}
+              className={InputClasses.FORM_TEXT}
+              name={IFieldsForm.LASTNAME}
+              error={errorLastName}
+              ref={this.lastName}
+            />
             {errorLastName && <Hint value='Поле не может быть пустым' />}
-          </FormField>
-        </fieldset>
-        <fieldset className={styles.fieldset}>
-          <FormField legendName='Birthday'>
-            <FormLabel labelName='Date of Birth'>
-              <Input
-                type={InputTypes.DATE}
-                className={InputClasses.FORM_BIRTHDAY}
-                name={IFieldsForm.BIRTHDAY}
-                ref={this.birthday}
-              />
-            </FormLabel>
+          </FormLabel>
+        </FormField>
+        <FormField legendName='Birthday'>
+          <FormLabel labelName='Date of Birth'>
+            <Input
+              type={InputTypes.DATE}
+              className={InputClasses.FORM_BIRTHDAY}
+              name={IFieldsForm.BIRTHDAY}
+              ref={this.birthday}
+              error={errorBirthday}
+            />
             {errorBirthday && <Hint value='Заполни дату' />}
-          </FormField>
-        </fieldset>
-        <fieldset className={styles.fieldset}>
-          <FormField legendName='Country'>
-            <FormLabel labelName='Country of Residence'>
-              <select name={IFieldsForm.COUNTRY} ref={this.country}>
-                {this.option.map((item) => (
-                  <option value={item.value} key={item.id}>
-                    {item.text}
-                  </option>
-                ))}
-              </select>
-            </FormLabel>
+          </FormLabel>
+        </FormField>
+        <FormField legendName='Country'>
+          <FormLabel labelName='Country of Residence'>
+            <select name={IFieldsForm.COUNTRY} ref={this.country} className={styles.select}>
+              {this.option.map((item) => (
+                <option value={item.value} key={item.id}>
+                  {item.text}
+                </option>
+              ))}
+            </select>
             {errorCountry && <Hint value='Выбери страну' />}
-          </FormField>
-        </fieldset>
-        <fieldset className={styles.fieldset}>
-          <FormField legendName='Agree'>
-            <FormLabel labelName='Consent to account processing'>
-              <Input
-                type={InputTypes.CHECKBOX}
-                className={InputClasses.CHECKBOX}
-                name={IFieldsForm.AGREE}
-                ref={this.agree}
-              />
-            </FormLabel>
-            {errorAgree && <Hint value='Поставь галку' />}
-          </FormField>
-        </fieldset>
-        <fieldset className={styles.fieldset}>
-          <FormField legendName='Gender'>
-            <FormLabel labelName='Male'>
-              <Input
-                type={InputTypes.RADIO}
-                className={InputClasses.RADIO}
-                name={IFieldsForm.GENDER}
-                ref={this.male}
-                value='male'
-              />
-            </FormLabel>
-            <FormLabel labelName='Female'>
-              <Input
-                type={InputTypes.RADIO}
-                className={InputClasses.RADIO}
-                name={IFieldsForm.GENDER}
-                ref={this.female}
-                value='female'
-              />
-            </FormLabel>
+          </FormLabel>
+        </FormField>
+        <FormField legendName='Agree'>
+          <FormLabel labelName='Consent to account processing'>
+            <Input
+              type={InputTypes.CHECKBOX}
+              className={InputClasses.CHECKBOX}
+              name={IFieldsForm.AGREE}
+              ref={this.agree}
+            />
+          </FormLabel>
+          {errorAgree && <Hint value='Поставь галку' />}
+        </FormField>
+        <FormField legendName='Gender'>
+          <FormLabel labelName='Male'>
+            <Input
+              type={InputTypes.RADIO}
+              className={InputClasses.RADIO}
+              name={IFieldsForm.GENDER}
+              ref={this.male}
+              value='male'
+            />
+          </FormLabel>
+          <FormLabel labelName='Female'>
+            <Input
+              type={InputTypes.RADIO}
+              className={InputClasses.RADIO}
+              name={IFieldsForm.GENDER}
+              ref={this.female}
+              value='female'
+            />
             {errorGender && <Hint value='сделай выбор' />}
-          </FormField>
-        </fieldset>
-        <fieldset className={styles.fieldset}>
-          <FormField legendName='Photo'>
-            <FormLabel labelName='Upload image'>
-              <Input
-                type={InputTypes.FILE}
-                className={InputClasses.FILE}
-                name={IFieldsForm.IMAGE}
-                ref={this.file}
-                accept='image/*'
-              />
-            </FormLabel>
+          </FormLabel>
+        </FormField>
+        <FormField legendName='Photo'>
+          <FormLabel labelName='Upload image'>
+            <Input
+              type={InputTypes.FILE}
+              className={InputClasses.FILE}
+              name={IFieldsForm.IMAGE}
+              ref={this.file}
+              accept='image/*'
+            />
             {errorFile && <Hint value='Вложи файл' />}
-          </FormField>
-        </fieldset>
+          </FormLabel>
+        </FormField>
         <button type='submit'>Submit</button>
       </form>
     );

@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Form } from 'components/form';
-import { IFromPageState, IPropsForm, IReadyObjectField, IValueFieldsForm } from 'types/interface/form';
+import { IFromPageState, IPropsForm, IReadyObjectField } from 'types/interface/form';
 import { CardForm } from 'components/card-form';
 import styles from './form.module.css';
 

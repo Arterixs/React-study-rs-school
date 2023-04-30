@@ -16,6 +16,7 @@
   --color-border-card: #555;
   --color-shadow-card: #000;
   --color-svg-audio: #7c7521;
+  --color-error: red;
 
   --gradient-input-audio-one: rgb(0, 188, 140) 0%;
   --gradient-input-audio-two: rgb(61, 133, 140) 0%;
