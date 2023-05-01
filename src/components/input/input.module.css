@@ -53,8 +53,8 @@
   height: 30px;
   border-radius: 10px;
   border: none;
-  background-color: silver;
-  color: #1e4c73;
+  background-color: var(--background-input-form);
+  color: var(--color-input-form);
   font-size: 18px;
   font-family: var(--font-regular);
   padding: 5px 5px 7px 5px;
@@ -64,13 +64,25 @@
 .birthday {
   cursor: pointer;
   height: 25px;
-  color: #1e4c73;
+  color: var(--color-input-form);
   padding: 0 5px;
-  outline: navajowhite;
-  background: silver;
+  outline: none;
+  background-color: var(--background-input-form);
   font-family: var(--font-regular);
-  border: navajowhite;
+  border: none;
   border-radius: 10px;
+}
+
+.checkbox {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.radio {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
 }
 
 .error {

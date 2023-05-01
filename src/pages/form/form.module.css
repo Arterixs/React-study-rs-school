@@ -8,3 +8,9 @@
   margin: auto;
   padding: 10px;
 }
+
+.title {
+  font-size: 24px;
+  font-family: var(--font-bold);
+  color: var(--color-form-main);
+}

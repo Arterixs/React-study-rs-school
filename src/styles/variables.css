@@ -8,6 +8,7 @@
   --background-card: #303030;
   --background-button-audio: #000;
   --background-thumbs-audio: rgb(95, 24, 24);
+  --background-input-form: silver;
 
   --color-content-not-found: #637671;
   --color-title-search: #b56c41;
@@ -17,6 +18,12 @@
   --color-shadow-card: #000;
   --color-svg-audio: #7c7521;
   --color-error: red;
+  --color-input-form: #1e4c73;
+  --color-btn-form: #334529;
+  --color-form-main: #5a9ec0;
+  --color-form-legend: #787878;
+
+  --hover-btn-form: #9f9b9b;
 
   --gradient-input-audio-one: rgb(0, 188, 140) 0%;
   --gradient-input-audio-two: rgb(61, 133, 140) 0%;

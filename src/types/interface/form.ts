@@ -47,5 +47,6 @@ export interface ICountry {
 
 export interface IFormFieldProps {
   legendName: string;
+  error: boolean;
   children: ReactNode[] | ReactNode;
 }

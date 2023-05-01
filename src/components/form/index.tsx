@@ -3,11 +3,12 @@ import { checkedFileImage, convertDate } from 'utils/helpers/form';
 import { Input } from 'components/input';
 import { Hint } from 'components/hint';
 import { InputTypes } from 'types/enums/types-components';
-import { IFieldsForm } from 'types/enums/form';
+import { HintForm, FieldsForm } from 'types/enums/form';
 import { ICountry, IFormState, IPropsForm, IValueFieldsForm } from 'types/interface/form';
 import { FormField } from 'components/form-field';
 import { PropsValueValidationField } from 'types/type/form';
 import { FormLabel } from 'components/form-field/form-label';
+import { Select } from 'components/select';
 import { InputClasses } from 'types/enums/classes';
 import styles from './form.module.css';
 
@@ -60,28 +61,28 @@ export class Form extends Component<IPropsForm, IFormState> {
 
   private findGenderCheck = () => this.arrayGender.find((ref) => ref.current?.checked)?.current?.value;
 
-  private validationFields = (value: PropsValueValidationField, field: IFieldsForm) => {
+  private validationFields = (value: PropsValueValidationField, field: FieldsForm) => {
     if (value) {
       switch (field) {
-        case IFieldsForm.FIRSTNAME:
+        case FieldsForm.FIRSTNAME:
           this.setState({ errorFirstName: false });
           break;
-        case IFieldsForm.LASTNAME:
+        case FieldsForm.LASTNAME:
           this.setState({ errorLastName: false });
           break;
-        case IFieldsForm.COUNTRY:
+        case FieldsForm.COUNTRY:
           this.setState({ errorCountry: false });
           break;
-        case IFieldsForm.IMAGE:
+        case FieldsForm.IMAGE:
           this.setState({ errorFile: false });
           break;
-        case IFieldsForm.GENDER:
+        case FieldsForm.GENDER:
           this.setState({ errorGender: false });
           break;
-        case IFieldsForm.BIRTHDAY:
+        case FieldsForm.BIRTHDAY:
           this.setState({ errorBirthday: false });
           break;
-        case IFieldsForm.AGREE:
+        case FieldsForm.AGREE:
           this.setState({ errorAgree: false });
           break;
         default:
@@ -90,25 +91,25 @@ export class Form extends Component<IPropsForm, IFormState> {
       return true;
     }
     switch (field) {
-      case IFieldsForm.FIRSTNAME:
+      case FieldsForm.FIRSTNAME:
         this.setState({ errorFirstName: true });
         break;
-      case IFieldsForm.LASTNAME:
+      case FieldsForm.LASTNAME:
         this.setState({ errorLastName: true });
         break;
-      case IFieldsForm.COUNTRY:
+      case FieldsForm.COUNTRY:
         this.setState({ errorCountry: true });
         break;
-      case IFieldsForm.IMAGE:
+      case FieldsForm.IMAGE:
         this.setState({ errorFile: true });
         break;
-      case IFieldsForm.GENDER:
+      case FieldsForm.GENDER:
         this.setState({ errorGender: true });
         break;
-      case IFieldsForm.BIRTHDAY:
+      case FieldsForm.BIRTHDAY:
         this.setState({ errorBirthday: true });
         break;
-      case IFieldsForm.AGREE:
+      case FieldsForm.AGREE:
         this.setState({ errorAgree: true });
         break;
       default:
@@ -133,13 +134,13 @@ export class Form extends Component<IPropsForm, IFormState> {
   private checkValidation = (objectFields: IValueFieldsForm) => {
     const { firstName, lastName, birthday, agree, image, country, gender } = objectFields;
 
-    const isFirstField = this.validationFields(firstName, IFieldsForm.FIRSTNAME);
-    const isSecondField = this.validationFields(lastName, IFieldsForm.LASTNAME);
-    const isThreesField = this.validationFields(birthday, IFieldsForm.BIRTHDAY);
-    const isFourField = this.validationFields(gender, IFieldsForm.GENDER);
-    const isFiveField = this.validationFields(agree, IFieldsForm.AGREE);
-    const isSixField = this.validationFields(image, IFieldsForm.IMAGE);
-    const isSevenField = this.validationFields(country, IFieldsForm.COUNTRY);
+    const isFirstField = this.validationFields(firstName, FieldsForm.FIRSTNAME);
+    const isSecondField = this.validationFields(lastName, FieldsForm.LASTNAME);
+    const isThreesField = this.validationFields(birthday, FieldsForm.BIRTHDAY);
+    const isFourField = this.validationFields(gender, FieldsForm.GENDER);
+    const isFiveField = this.validationFields(agree, FieldsForm.AGREE);
+    const isSixField = this.validationFields(image, FieldsForm.IMAGE);
+    const isSevenField = this.validationFields(country, FieldsForm.COUNTRY);
 
     const arrayCheckField = [
       isFirstField,
@@ -185,97 +186,106 @@ export class Form extends Component<IPropsForm, IFormState> {
       this.state;
     return (
       <form className={styles.form} onSubmit={this.handleClick} ref={this.form}>
-        <FormField legendName='Username'>
+        <FormField legendName='Username' error={errorFirstName || errorLastName}>
           <FormLabel labelName='FirstName'>
             <Input
               type={InputTypes.TEXT}
               className={InputClasses.FORM_TEXT}
               error={errorFirstName}
-              name={IFieldsForm.FIRSTNAME}
+              name={FieldsForm.FIRSTNAME}
               ref={this.firstName}
             />
-            {errorFirstName && <Hint value='Поле не может быть пустым' />}
+            {errorFirstName && <Hint value={HintForm.TEXT_INPUT} />}
           </FormLabel>
           <FormLabel labelName='LastName'>
             <Input
               type={InputTypes.TEXT}
               className={InputClasses.FORM_TEXT}
-              name={IFieldsForm.LASTNAME}
+              name={FieldsForm.LASTNAME}
               error={errorLastName}
               ref={this.lastName}
             />
-            {errorLastName && <Hint value='Поле не может быть пустым' />}
+            {errorLastName && <Hint value={HintForm.TEXT_INPUT} />}
           </FormLabel>
         </FormField>
-        <FormField legendName='Birthday'>
+        <FormField legendName='Birthday' error={errorBirthday}>
           <FormLabel labelName='Date of Birth'>
             <Input
               type={InputTypes.DATE}
               className={InputClasses.FORM_BIRTHDAY}
-              name={IFieldsForm.BIRTHDAY}
+              name={FieldsForm.BIRTHDAY}
               ref={this.birthday}
               error={errorBirthday}
             />
-            {errorBirthday && <Hint value='Заполни дату' />}
+            {errorBirthday && <Hint value={HintForm.DATE_INPUT} />}
           </FormLabel>
         </FormField>
-        <FormField legendName='Country'>
+        <FormField legendName='Country' error={errorCountry}>
           <FormLabel labelName='Country of Residence'>
-            <select name={IFieldsForm.COUNTRY} ref={this.country} className={styles.select}>
-              {this.option.map((item) => (
-                <option value={item.value} key={item.id}>
-                  {item.text}
-                </option>
-              ))}
-            </select>
-            {errorCountry && <Hint value='Выбери страну' />}
+            <Select
+              className='select'
+              name={FieldsForm.COUNTRY}
+              ref={this.country}
+              option={this.option}
+              error={errorCountry}
+            />
+            {errorCountry && <Hint value={HintForm.COUNTRY_INPUT} />}
           </FormLabel>
         </FormField>
-        <FormField legendName='Agree'>
-          <FormLabel labelName='Consent to account processing'>
-            <Input
-              type={InputTypes.CHECKBOX}
-              className={InputClasses.CHECKBOX}
-              name={IFieldsForm.AGREE}
-              ref={this.agree}
-            />
-          </FormLabel>
-          {errorAgree && <Hint value='Поставь галку' />}
-        </FormField>
-        <FormField legendName='Gender'>
-          <FormLabel labelName='Male'>
-            <Input
-              type={InputTypes.RADIO}
-              className={InputClasses.RADIO}
-              name={IFieldsForm.GENDER}
-              ref={this.male}
-              value='male'
-            />
-          </FormLabel>
-          <FormLabel labelName='Female'>
-            <Input
-              type={InputTypes.RADIO}
-              className={InputClasses.RADIO}
-              name={IFieldsForm.GENDER}
-              ref={this.female}
-              value='female'
-            />
-            {errorGender && <Hint value='сделай выбор' />}
+        <FormField legendName='Agree' error={errorAgree}>
+          <FormLabel labelName={null}>
+            <div className={styles['wrapper-checkbox']}>
+              <p>Consent to account processing</p>
+              <Input
+                type={InputTypes.CHECKBOX}
+                className={InputClasses.CHECKBOX}
+                name={FieldsForm.AGREE}
+                ref={this.agree}
+              />
+            </div>
+            {errorAgree && <Hint value={HintForm.CHECKBOX_INPUT} />}
           </FormLabel>
         </FormField>
-        <FormField legendName='Photo'>
+        <FormField legendName='Gender' error={errorGender}>
+          <FormLabel labelName={null}>
+            <div className={styles['wrapper-radio']}>
+              <label htmlFor='female'>Female</label>
+              <Input
+                type={InputTypes.RADIO}
+                className={InputClasses.RADIO}
+                name={FieldsForm.GENDER}
+                ref={this.female}
+                value='female'
+                id='female'
+              />
+              <label htmlFor='male'>Male</label>
+              <Input
+                type={InputTypes.RADIO}
+                className={InputClasses.RADIO}
+                name={FieldsForm.GENDER}
+                ref={this.male}
+                value='male'
+                id='male'
+              />
+            </div>
+            {errorGender && <Hint value={HintForm.GENDER_INPUT} />}
+          </FormLabel>
+        </FormField>
+        <FormField legendName='Photo' error={errorFile}>
           <FormLabel labelName='Upload image'>
             <Input
               type={InputTypes.FILE}
               className={InputClasses.FILE}
-              name={IFieldsForm.IMAGE}
+              name={FieldsForm.IMAGE}
               ref={this.file}
               accept='image/*'
             />
-            {errorFile && <Hint value='Вложи файл' />}
+            {errorFile && <Hint value={HintForm.FILE_INPUT} />}
           </FormLabel>
         </FormField>
-        <button type='submit'>Submit</button>
+        <button type='submit' className={styles.submit}>
+          Submit
+        </button>
       </form>
     );
   }

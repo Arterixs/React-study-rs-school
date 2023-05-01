@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import styles from './formField.module.css';
 
 interface IFormFieldProps {
-  labelName: string;
+  labelName: string | null;
   children: ReactNode;
 }
 

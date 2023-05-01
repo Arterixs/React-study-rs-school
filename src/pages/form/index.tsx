@@ -28,7 +28,9 @@ export class FormPage extends Component<IPropsForm, IFromPageState> {
     const { arrayCards } = this.state;
     return (
       <section className={styles.container}>
-        <p data-testid='about-page'>Form</p>
+        <p data-testid='about-page' className={styles.title}>
+          Form
+        </p>
         <Form option={option} setCard={this.setCard} />
         {arrayCards.map((item) => {
           this.count += 1;
