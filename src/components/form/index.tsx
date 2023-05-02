@@ -2,13 +2,14 @@ import React, { Component, SyntheticEvent } from 'react';
 import { checkedFileImage, convertDate, getYearDayMonth } from 'utils/helpers/form';
 import { Input } from 'components/input';
 import { Hint } from 'components/hint';
+import { Select } from 'components/select';
+import { PromtForm } from 'components/hint-form';
 import { InputTypes } from 'types/enums/types-components';
 import { HintForm, FieldsForm } from 'types/enums/form';
 import { ICountry, IFormState, IPropsForm, IValueFieldsForm } from 'types/interface/form';
 import { FormField } from 'components/form-field';
 import { PropsValueValidationField } from 'types/type/form';
 import { FormLabel } from 'components/form-field/form-label';
-import { Select } from 'components/select';
 import { InputClasses } from 'types/enums/classes';
 import styles from './form.module.css';
 
@@ -56,7 +57,17 @@ export class Form extends Component<IPropsForm, IFormState> {
       errorAgree: false,
       errorGender: false,
       errorFile: false,
+      openHint: false,
+      flagHint: false,
     };
+  }
+
+  componentDidUpdate() {
+    const { openHint } = this.state;
+    if (openHint) {
+      this.firstName.current?.focus();
+      setTimeout(() => this.setState({ openHint: false }), 4000);
+    }
   }
 
   private findGenderCheck = () => this.arrayGender.find((ref) => ref.current?.checked)?.current?.value;
@@ -177,17 +188,30 @@ export class Form extends Component<IPropsForm, IFormState> {
     if (getValidObject) {
       const { setCard } = this.props;
       setCard(getValidObject);
+      this.setState({ openHint: true, flagHint: true });
       this.clearForm();
+    } else {
+      this.setState({ openHint: true, flagHint: false });
     }
   };
 
   private clearForm = () => this.form.current?.reset();
 
   render() {
-    const { errorFirstName, errorLastName, errorBirthday, errorGender, errorAgree, errorFile, errorCountry } =
-      this.state;
+    const {
+      errorFirstName,
+      errorLastName,
+      errorBirthday,
+      errorGender,
+      errorAgree,
+      errorFile,
+      errorCountry,
+      openHint,
+      flagHint,
+    } = this.state;
     return (
       <form className={styles.form} onSubmit={this.handleClick} ref={this.form}>
+        {openHint && <PromtForm error={flagHint} />}
         <FormField legendName='Username' error={errorFirstName || errorLastName}>
           <FormLabel labelName='FirstName'>
             <Input

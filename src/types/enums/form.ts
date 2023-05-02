@@ -16,3 +16,8 @@ export const enum HintForm {
   GENDER_INPUT = 'Choose your gender',
   FILE_INPUT = 'Upload photo',
 }
+
+export const enum PromtFormValue {
+  SUCCES = 'Form submitted succesfully!',
+  FAIL = 'Error! Please check the form is correct',
+}

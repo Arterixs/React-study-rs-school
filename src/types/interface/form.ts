@@ -8,6 +8,8 @@ export interface IFormState {
   errorAgree: boolean;
   errorGender: boolean;
   errorFile: boolean;
+  openHint: boolean;
+  flagHint: boolean;
 }
 
 export interface IValueFieldsForm {
