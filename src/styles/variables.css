@@ -9,6 +9,9 @@
   --background-button-audio: #000;
   --background-thumbs-audio: rgb(95, 24, 24);
   --background-input-form: silver;
+  --background-card-form: #9d9da8;
+  --background-card-form-list-body: #8f8f8f;
+  --background-card-form-list-head: #b7b4b3;
 
   --color-content-not-found: #637671;
   --color-title-search: #b56c41;
@@ -22,6 +25,8 @@
   --color-btn-form: #334529;
   --color-form-main: #5a9ec0;
   --color-form-legend: #787878;
+  --color-border-card-form: #000;
+  --color-list-form-body: #fcfcfc;
 
   --hover-btn-form: #9f9b9b;
 

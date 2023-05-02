@@ -32,10 +32,12 @@ export class FormPage extends Component<IPropsForm, IFromPageState> {
           Form
         </p>
         <Form option={option} setCard={this.setCard} />
-        {arrayCards.map((item) => {
-          this.count += 1;
-          return <CardForm data={item} key={this.count} />;
-        })}
+        <section className={styles['wrapper-cards']}>
+          {arrayCards.map((item) => {
+            this.count += 1;
+            return <CardForm data={item} key={this.count} />;
+          })}
+        </section>
       </section>
     );
   }

@@ -14,3 +14,11 @@
   font-family: var(--font-bold);
   color: var(--color-form-main);
 }
+
+.wrapper-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 20px;
+}

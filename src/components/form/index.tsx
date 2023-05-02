@@ -1,5 +1,5 @@
 import React, { Component, SyntheticEvent } from 'react';
-import { checkedFileImage, convertDate } from 'utils/helpers/form';
+import { checkedFileImage, convertDate, getYearDayMonth } from 'utils/helpers/form';
 import { Input } from 'components/input';
 import { Hint } from 'components/hint';
 import { InputTypes } from 'types/enums/types-components';
@@ -155,10 +155,12 @@ export class Form extends Component<IPropsForm, IFormState> {
     const isCheckValidation = arrayCheckField.find((item) => !item);
 
     if (!isCheckValidation && firstName && lastName && birthday && agree && image && country && gender) {
+      const parseDate = JSON.parse(birthday) as string;
+      const changeDate = getYearDayMonth(parseDate);
       return {
         firstName,
         lastName,
-        birthday,
+        birthday: changeDate,
         gender,
         agree,
         image,
