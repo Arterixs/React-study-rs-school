@@ -11,11 +11,12 @@ export const Select = forwardRef((props: ISelectProps, ref: ForwardedRef<HTMLSel
   });
   return (
     <select ref={ref} className={classes} {...attrs}>
-      {option.map((item) => (
-        <option value={item.value} key={item.id}>
-          {item.text}
-        </option>
-      ))}
+      {option &&
+        option.map((item) => (
+          <option value={item.value} key={item.id}>
+            {item.text}
+          </option>
+        ))}
     </select>
   );
 });

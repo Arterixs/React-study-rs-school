@@ -1,5 +1,5 @@
 import { IFormFieldProps } from 'types/interface/form';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import styles from './formField.module.css';
 
 export const FormField = ({ legendName, error, children }: IFormFieldProps) => {

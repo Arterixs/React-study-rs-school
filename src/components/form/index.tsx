@@ -1,9 +1,9 @@
-import React, { Component, SyntheticEvent } from 'react';
+import { Component, SyntheticEvent, createRef, RefObject } from 'react';
 import { checkedFileImage, convertDate, getYearDayMonth } from 'utils/helpers/form';
 import { Input } from 'components/input';
 import { Hint } from 'components/hint';
 import { Select } from 'components/select';
-import { PromtForm } from 'components/hint-form';
+import { PromtForm } from 'components/promt-form';
 import { InputTypes } from 'types/enums/types-components';
 import { HintForm, FieldsForm } from 'types/enums/form';
 import { ICountry, IFormState, IPropsForm, IValueFieldsForm } from 'types/interface/form';
@@ -14,39 +14,30 @@ import { InputClasses } from 'types/enums/classes';
 import styles from './form.module.css';
 
 export class Form extends Component<IPropsForm, IFormState> {
-  private firstName: React.RefObject<HTMLInputElement>;
+  private firstName = createRef<HTMLInputElement>();
 
-  private lastName: React.RefObject<HTMLInputElement>;
+  private lastName = createRef<HTMLInputElement>();
 
-  private birthday: React.RefObject<HTMLInputElement>;
+  private birthday = createRef<HTMLInputElement>();
 
-  private country: React.RefObject<HTMLSelectElement>;
+  private country = createRef<HTMLSelectElement>();
 
-  private agree: React.RefObject<HTMLInputElement>;
+  private agree = createRef<HTMLInputElement>();
 
-  private male: React.RefObject<HTMLInputElement>;
+  private male = createRef<HTMLInputElement>();
 
-  private female: React.RefObject<HTMLInputElement>;
+  private female = createRef<HTMLInputElement>();
 
-  private file: React.RefObject<HTMLInputElement>;
+  private file = createRef<HTMLInputElement>();
 
-  private form: React.RefObject<HTMLFormElement>;
+  private form = createRef<HTMLFormElement>();
 
-  private arrayGender: React.RefObject<HTMLInputElement>[];
+  private arrayGender: RefObject<HTMLInputElement>[];
 
   private option: ICountry[];
 
   constructor(props: IPropsForm) {
     super(props);
-    this.firstName = React.createRef();
-    this.lastName = React.createRef();
-    this.birthday = React.createRef();
-    this.country = React.createRef();
-    this.agree = React.createRef();
-    this.male = React.createRef();
-    this.female = React.createRef();
-    this.file = React.createRef();
-    this.form = React.createRef();
     this.arrayGender = [this.male, this.female];
     this.option = props.option;
     this.state = {
@@ -261,12 +252,13 @@ export class Form extends Component<IPropsForm, IFormState> {
         <FormField legendName='Agree' error={errorAgree}>
           <FormLabel labelName={null}>
             <div className={styles['wrapper-checkbox']}>
-              <p>Consent to account processing</p>
+              <label htmlFor='checkbox'>Consent to account processing</label>
               <Input
                 type={InputTypes.CHECKBOX}
                 className={InputClasses.CHECKBOX}
                 name={FieldsForm.AGREE}
                 ref={this.agree}
+                id='checkbox'
               />
             </div>
             {errorAgree && <Hint value={HintForm.CHECKBOX_INPUT} />}

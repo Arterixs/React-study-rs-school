@@ -1,5 +1,5 @@
 import { IReadyObjectField } from 'types/interface/form';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import styles from './card-form.module.css';
 
 export const CardForm = ({ data }: { data: IReadyObjectField }) => {

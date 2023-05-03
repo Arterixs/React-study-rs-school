@@ -1,5 +1,5 @@
 import { PromtFormValue } from 'types/enums/form';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import styles from './styles.hint_form.module.css';
 
 export const PromtForm = ({ error }: { error: boolean }) => {

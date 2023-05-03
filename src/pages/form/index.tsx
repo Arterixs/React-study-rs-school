@@ -1,13 +1,13 @@
 import { Component } from 'react';
 import { Form } from 'components/form';
-import { IFromPageState, IPropsForm, IReadyObjectField } from 'types/interface/form';
+import { IFromPageState, IPropsFormPage, IReadyObjectField } from 'types/interface/form';
 import { CardForm } from 'components/card-form';
 import styles from './form.module.css';
 
-export class FormPage extends Component<IPropsForm, IFromPageState> {
+export class FormPage extends Component<IPropsFormPage, IFromPageState> {
   count: number;
 
-  constructor(props: IPropsForm) {
+  constructor(props: IPropsFormPage) {
     super(props);
     this.count = 0;
     this.state = {
@@ -28,7 +28,7 @@ export class FormPage extends Component<IPropsForm, IFromPageState> {
     const { arrayCards } = this.state;
     return (
       <section className={styles.container}>
-        <p data-testid='about-page' className={styles.title}>
+        <p data-testid='form-page' className={styles.title}>
           Form
         </p>
         <Form option={option} setCard={this.setCard} />

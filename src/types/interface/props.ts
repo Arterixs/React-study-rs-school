@@ -55,7 +55,7 @@ export interface ISelectProps {
   defaultValue?: number | string;
   value?: string | number;
   name?: string;
-  option: ICountry[];
+  option?: ICountry[];
   ref?: React.RefObject<HTMLSelectElement>;
   accept?: string;
   error?: boolean;

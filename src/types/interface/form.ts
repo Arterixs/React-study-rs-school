@@ -36,6 +36,10 @@ export interface IFromPageState {
   arrayCards: IReadyObjectField[] | [];
 }
 
+export interface IPropsFormPage {
+  option: ICountry[];
+}
+
 export interface IPropsForm {
   option: ICountry[];
   setCard: (object: IReadyObjectField) => void;
