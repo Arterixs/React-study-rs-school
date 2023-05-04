@@ -179,8 +179,8 @@ export class Form extends Component<IPropsForm, IFormState> {
     if (getValidObject) {
       const { setCard } = this.props;
       setCard(getValidObject);
-      this.setState({ openHint: true, flagHint: true });
       this.clearForm();
+      this.setState({ openHint: true, flagHint: true });
     } else {
       this.setState({ openHint: true, flagHint: false });
     }

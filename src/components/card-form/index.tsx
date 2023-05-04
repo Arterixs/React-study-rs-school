@@ -7,7 +7,7 @@ export const CardForm = ({ data }: { data: IReadyObjectField }) => {
   const classesHead = clsx(styles['common-list'], styles['list-head']);
   const classesDown = clsx(styles['common-list'], styles['list-body']);
   return (
-    <article className={styles.card}>
+    <article className={styles.card} data-testid='form-card'>
       <img src={URL.createObjectURL(image)} alt='image_user' className={styles.image} />
       <ul className={styles['list-item']}>
         <li className={styles.list}>
