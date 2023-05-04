@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+}
+
+.title {
+  font-size: 24px;
+  font-family: var(--font-bold);
+  color: var(--color-form-main);
+}
+
+.wrapper-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 20px;
+}

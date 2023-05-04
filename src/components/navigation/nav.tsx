@@ -11,6 +11,9 @@ export const Nav = () => (
       <NavLink to={Routers.MAIN_PAGE} className={styles.item} data-testid='main'>
         main
       </NavLink>
+      <NavLink to={Routers.FORM} className={styles.item} data-testid='form'>
+        form
+      </NavLink>
     </ul>
   </nav>
 );

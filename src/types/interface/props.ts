@@ -1,7 +1,8 @@
 import { ChangeEvent } from 'react';
 import { ButtonClasses, InputClasses } from '../enums/classes';
-import { TypesComponents } from '../enums/types-components';
+import { InputTypes } from '../enums/types-components';
 import { IBirdsCard } from './card';
+import { ICountry } from './form';
 
 export interface IAboutCardProps {
   name: string;
@@ -36,9 +37,26 @@ export interface ICardProps {
 }
 
 export interface IInputProps {
-  type: TypesComponents;
+  type: InputTypes;
   className: InputClasses;
   defaultValue?: number | string;
   value?: string | number;
+  name?: string;
+  required?: boolean;
+  ref?: React.RefObject<HTMLInputElement>;
+  accept?: string;
+  error?: boolean;
+  id?: string;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+}
+
+export interface ISelectProps {
+  className: string;
+  defaultValue?: number | string;
+  value?: string | number;
+  name?: string;
+  option?: ICountry[];
+  ref?: React.RefObject<HTMLSelectElement>;
+  accept?: string;
+  error?: boolean;
 }

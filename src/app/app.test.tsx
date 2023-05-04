@@ -14,8 +14,11 @@ describe('test router', () => {
     const user = userEvent.setup();
     const mainLink = screen.getByTestId('main');
     const aboutLink = screen.getByTestId('about');
+    const formLink = screen.getByTestId('form');
     await user.click(aboutLink);
     expect(screen.getByTestId('about-page')).toBeInTheDocument();
+    await user.click(formLink);
+    expect(screen.getByTestId('form-page')).toBeInTheDocument();
     await user.click(mainLink);
     expect(screen.queryByTestId('about-page')).not.toBeInTheDocument();
     expect(screen.getByText(/search/i));

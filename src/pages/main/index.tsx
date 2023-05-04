@@ -2,7 +2,7 @@ import { Input } from 'components/input';
 import { Sprite } from 'components/sprite/sprite';
 import { ChangeEvent, Component } from 'react';
 import { InputClasses } from 'types/enums/classes';
-import { TypesComponents } from 'types/enums/types-components';
+import { InputTypes } from 'types/enums/types-components';
 import { IMainProps } from 'types/interface/props';
 import { IMainState } from 'types/interface/states';
 import { setCopyBirds } from 'utils/helpers/copy-elements';
@@ -49,7 +49,7 @@ export class Main extends Component<IMainProps, IMainState> {
           <Input
             onChange={this.changeValueInput}
             value={valueSearch}
-            type={TypesComponents.TEXT}
+            type={InputTypes.TEXT}
             className={InputClasses.SEARCH}
           />
         </section>
