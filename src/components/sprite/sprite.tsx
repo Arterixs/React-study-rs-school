@@ -1,4 +1,6 @@
-export const Sprite = () => (
+import { memo } from 'react';
+
+export const Sprite = memo(() => (
   <svg style={{ width: '0', height: '0', overflow: 'hidden' }}>
     <symbol viewBox='0 0 64 64' id='play'>
       <path
@@ -13,4 +15,6 @@ export const Sprite = () => (
       />
     </symbol>
   </svg>
-);
+));
+
+Sprite.displayName = 'Sprite';
