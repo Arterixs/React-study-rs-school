@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1685650357520" clover="3.2.0">
-  <project timestamp="1685650357520" name="All files">
-    <metrics statements="211" coveredstatements="207" conditionals="73" coveredconditionals="68" methods="34" coveredmethods="34" elements="318" coveredelements="309" complexity="0" loc="211" ncloc="211" packages="12" files="15" classes="15"/>
-    <package name="components.card-form">
-      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\components\card-form\index.tsx">
-        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="24" type="stmt"/>
-        <line num="7" count="24" type="stmt"/>
-        <line num="8" count="24" type="stmt"/>
-        <line num="9" count="24" type="stmt"/>
-      </file>
-    </package>
-    <package name="components.form">
-      <metrics statements="99" coveredstatements="97" conditionals="47" coveredconditionals="45" methods="12" coveredmethods="12"/>
-      <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\components\form\index.tsx">
-        <metrics statements="99" coveredstatements="97" conditionals="47" coveredconditionals="45" methods="12" coveredmethods="12"/>
+<coverage generated="1685815253810" clover="3.2.0">
+  <project timestamp="1685815253810" name="All files">
+    <metrics statements="281" coveredstatements="278" conditionals="53" coveredconditionals="51" methods="62" coveredmethods="61" elements="396" coveredelements="390" complexity="0" loc="281" ncloc="281" packages="30" files="40" classes="40"/>
+    <package name="app">
+      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\app\index.tsx">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -27,124 +14,118 @@
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="6" type="stmt"/>
-        <line num="19" count="6" type="stmt"/>
-        <line num="21" count="6" type="stmt"/>
-        <line num="23" count="6" type="stmt"/>
-        <line num="25" count="6" type="stmt"/>
-        <line num="27" count="6" type="stmt"/>
-        <line num="29" count="6" type="stmt"/>
-        <line num="31" count="6" type="stmt"/>
-        <line num="33" count="6" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.button">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\components\button\index.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="55" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.card-form">
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\components\card-form\index.tsx">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="9" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
+        <line num="9" count="9" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.footer">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="footer.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\components\footer\footer.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.form">
+      <metrics statements="32" coveredstatements="32" conditionals="20" coveredconditionals="20" methods="7" coveredmethods="7"/>
+      <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\components\form\index.tsx">
+        <metrics statements="32" coveredstatements="32" conditionals="20" coveredconditionals="20" methods="7" coveredmethods="7"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="27" type="stmt"/>
+        <line num="23" count="27" type="stmt"/>
+        <line num="37" count="27" type="stmt"/>
+        <line num="38" count="17" type="cond" truecount="1" falsecount="0"/>
+        <line num="39" count="6" type="stmt"/>
         <line num="40" count="6" type="stmt"/>
-        <line num="41" count="6" type="stmt"/>
-        <line num="42" count="6" type="stmt"/>
-        <line num="43" count="6" type="stmt"/>
-        <line num="57" count="20" type="stmt"/>
-        <line num="58" count="20" type="cond" truecount="1" falsecount="0"/>
-        <line num="59" count="17" type="stmt"/>
-        <line num="60" count="17" type="stmt"/>
-        <line num="64" count="31" type="stmt"/>
-        <line num="66" count="6" type="stmt"/>
-        <line num="67" count="119" type="cond" truecount="1" falsecount="0"/>
-        <line num="68" count="90" type="cond" truecount="7" falsecount="1"/>
-        <line num="70" count="15" type="stmt"/>
-        <line num="71" count="15" type="stmt"/>
-        <line num="73" count="15" type="stmt"/>
-        <line num="74" count="15" type="stmt"/>
-        <line num="76" count="13" type="stmt"/>
-        <line num="77" count="13" type="stmt"/>
-        <line num="79" count="10" type="stmt"/>
-        <line num="80" count="10" type="stmt"/>
-        <line num="82" count="11" type="stmt"/>
-        <line num="83" count="11" type="stmt"/>
-        <line num="85" count="14" type="stmt"/>
-        <line num="86" count="14" type="stmt"/>
-        <line num="88" count="12" type="stmt"/>
-        <line num="89" count="12" type="stmt"/>
-        <line num="91" count="0" type="stmt"/>
-        <line num="93" count="90" type="stmt"/>
-        <line num="95" count="29" type="cond" truecount="7" falsecount="1"/>
-        <line num="97" count="2" type="stmt"/>
-        <line num="98" count="2" type="stmt"/>
-        <line num="100" count="2" type="stmt"/>
-        <line num="101" count="2" type="stmt"/>
-        <line num="103" count="4" type="stmt"/>
-        <line num="104" count="4" type="stmt"/>
-        <line num="106" count="7" type="stmt"/>
-        <line num="107" count="7" type="stmt"/>
-        <line num="109" count="6" type="stmt"/>
-        <line num="110" count="6" type="stmt"/>
-        <line num="112" count="3" type="stmt"/>
-        <line num="113" count="3" type="stmt"/>
-        <line num="115" count="5" type="stmt"/>
-        <line num="116" count="5" type="stmt"/>
-        <line num="118" count="0" type="stmt"/>
-        <line num="120" count="29" type="stmt"/>
-        <line num="123" count="6" type="stmt"/>
-        <line num="124" count="17" type="stmt"/>
-        <line num="125" count="17" type="stmt"/>
-        <line num="136" count="6" type="stmt"/>
-        <line num="137" count="17" type="stmt"/>
-        <line num="139" count="17" type="stmt"/>
-        <line num="140" count="17" type="stmt"/>
-        <line num="141" count="17" type="stmt"/>
-        <line num="142" count="17" type="stmt"/>
-        <line num="143" count="17" type="stmt"/>
-        <line num="144" count="17" type="stmt"/>
-        <line num="145" count="17" type="stmt"/>
-        <line num="147" count="17" type="stmt"/>
-        <line num="157" count="88" type="stmt"/>
-        <line num="159" count="17" type="cond" truecount="9" falsecount="0"/>
-        <line num="160" count="9" type="stmt"/>
-        <line num="161" count="9" type="stmt"/>
-        <line num="162" count="9" type="stmt"/>
-        <line num="172" count="8" type="stmt"/>
-        <line num="175" count="6" type="stmt"/>
-        <line num="176" count="17" type="stmt"/>
-        <line num="177" count="17" type="stmt"/>
-        <line num="178" count="17" type="stmt"/>
-        <line num="179" count="17" type="cond" truecount="2" falsecount="0"/>
-        <line num="180" count="9" type="stmt"/>
-        <line num="181" count="9" type="stmt"/>
-        <line num="182" count="9" type="stmt"/>
-        <line num="183" count="9" type="stmt"/>
-        <line num="185" count="8" type="stmt"/>
-        <line num="189" count="9" type="stmt"/>
-        <line num="202" count="26" type="stmt"/>
-        <line num="203" count="26" type="stmt"/>
+        <line num="41" count="5" type="stmt"/>
+        <line num="45" count="27" type="stmt"/>
+        <line num="46" count="9" type="stmt"/>
+        <line num="47" count="9" type="stmt"/>
+        <line num="48" count="9" type="cond" truecount="3" falsecount="0"/>
+        <line num="49" count="9" type="stmt"/>
+        <line num="50" count="9" type="stmt"/>
+        <line num="51" count="9" type="stmt"/>
+        <line num="52" count="9" type="stmt"/>
+        <line num="53" count="9" type="stmt"/>
+        <line num="57" count="27" type="stmt"/>
+        <line num="59" count="27" type="stmt"/>
       </file>
     </package>
     <package name="components.form-field">
       <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
       <file name="form-label.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\components\form-field\form-label.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="182" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="189" type="stmt"/>
       </file>
       <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\components\form-field\index.tsx">
         <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="162" type="stmt"/>
+        <line num="10" count="162" type="stmt"/>
+        <line num="14" count="162" type="stmt"/>
+        <line num="17" count="54" type="cond" truecount="2" falsecount="0"/>
+      </file>
+    </package>
+    <package name="components.header">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="header.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\components\header\header.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="156" type="stmt"/>
-        <line num="10" count="156" type="stmt"/>
-        <line num="14" count="156" type="stmt"/>
-        <line num="17" count="52" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
       </file>
     </package>
     <package name="components.hint">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\components\hint\index.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
         <line num="4" count="36" type="stmt"/>
       </file>
     </package>
@@ -152,24 +133,35 @@
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\components\input\index.tsx">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="256" type="stmt"/>
+        <line num="8" count="256" type="stmt"/>
+        <line num="12" count="256" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.navigation">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="nav.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\components\navigation\nav.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="182" type="stmt"/>
-        <line num="8" count="182" type="stmt"/>
-        <line num="12" count="182" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
       </file>
     </package>
     <package name="components.promt-form">
       <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\components\promt-form\index.tsx">
         <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
         <line num="6" count="17" type="stmt"/>
         <line num="11" count="17" type="cond" truecount="2" falsecount="0"/>
         <line num="12" count="17" type="stmt"/>
@@ -179,119 +171,326 @@
       <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\components\select\index.tsx">
         <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="27" type="stmt"/>
+        <line num="8" count="27" type="stmt"/>
+        <line num="12" count="27" type="stmt"/>
+        <line num="16" count="135" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.sprite">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="sprite.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\components\sprite\sprite.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.svg">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\components\svg\index.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="55" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.about">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\pages\about\index.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="26" type="stmt"/>
-        <line num="8" count="26" type="stmt"/>
-        <line num="12" count="26" type="stmt"/>
-        <line num="16" count="130" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
       </file>
     </package>
     <package name="pages.form">
-      <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\pages\form\index.tsx">
-        <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="15" type="stmt"/>
-        <line num="9" count="15" type="stmt"/>
-        <line num="11" count="15" type="stmt"/>
+        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="16" type="stmt"/>
+        <line num="9" count="16" type="stmt"/>
+        <line num="11" count="16" type="stmt"/>
         <line num="12" count="9" type="stmt"/>
         <line num="13" count="9" type="stmt"/>
         <line num="14" count="9" type="stmt"/>
-        <line num="15" count="9" type="stmt"/>
-        <line num="18" count="15" type="stmt"/>
+        <line num="17" count="16" type="stmt"/>
+        <line num="25" count="24" type="stmt"/>
         <line num="26" count="24" type="stmt"/>
-        <line num="27" count="24" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.layout">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\pages\layout\index.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.main">
+      <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+      <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\pages\main\index.tsx">
+        <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="12" type="stmt"/>
+        <line num="21" count="12" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="26" count="12" type="stmt"/>
+        <line num="28" count="12" type="stmt"/>
+        <line num="30" count="12" type="stmt"/>
+        <line num="31" count="12" type="stmt"/>
+        <line num="34" count="12" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.main.components.Card">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\pages\main\components\Card\index.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="55" type="stmt"/>
+        <line num="10" count="55" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.main.components.Card.components">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="about.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\pages\main\components\Card\components\about.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="55" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.main.components.Card.components.audio">
+      <metrics statements="14" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
+      <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\pages\main\components\Card\components\audio\index.tsx">
+        <metrics statements="14" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="11" count="49" type="stmt"/>
+        <line num="12" count="49" type="stmt"/>
+        <line num="17" count="49" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="23" count="55" type="stmt"/>
+        <line num="24" count="55" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.main.components.Card.components.control">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\pages\main\components\Card\components\control\index.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="55" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.main.components.Card.components.description">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\pages\main\components\Card\components\description\index.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="55" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.main.components.Card.components.image">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\pages\main\components\Card\components\image\index.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="55" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.main.components.card-block">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\pages\main\components\card-block\index.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="12" type="stmt"/>
+        <line num="8" count="55" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.not-found">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Not-found.tsx" path="D:\pet-projects\react-study\React-study-rs-school\src\pages\not-found\Not-found.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
       </file>
     </package>
     <package name="store">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="data.ts" path="D:\pet-projects\react-study\React-study-rs-school\src\store\data.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
       <file name="options.ts" path="D:\pet-projects\react-study\React-study-rs-school\src\store\options.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
       </file>
     </package>
     <package name="types.enums">
-      <metrics statements="37" coveredstatements="37" conditionals="14" coveredconditionals="14" methods="7" coveredmethods="7"/>
+      <metrics statements="44" coveredstatements="44" conditionals="18" coveredconditionals="18" methods="9" coveredmethods="9"/>
       <file name="classes.ts" path="D:\pet-projects\react-study\React-study-rs-school\src\types\enums\classes.ts">
         <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
-        <line num="1" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="5" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="15" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="16" count="1" type="stmt"/>
+        <line num="1" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="5" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="15" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="3" type="stmt"/>
       </file>
       <file name="form.ts" path="D:\pet-projects\react-study\React-study-rs-school\src\types\enums\form.ts">
         <metrics statements="18" coveredstatements="18" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+        <line num="1" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="11" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="20" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+      </file>
+      <file name="routers.ts" path="D:\pet-projects\react-study\React-study-rs-school\src\types\enums\routers.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="11" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="20" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
+      </file>
+      <file name="svg.ts" path="D:\pet-projects\react-study\React-study-rs-school\src\types\enums\svg.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
       </file>
       <file name="types-components.ts" path="D:\pet-projects\react-study\React-study-rs-school\src\types\enums\types-components.ts">
         <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
+        <line num="1" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
       </file>
     </package>
     <package name="utils.constants">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="other.ts" path="D:\pet-projects\react-study\React-study-rs-school\src\utils\constants\other.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
       </file>
     </package>
     <package name="utils.helpers">
-      <metrics statements="12" coveredstatements="10" conditionals="6" coveredconditionals="3" methods="3" coveredmethods="3"/>
+      <metrics statements="32" coveredstatements="31" conditionals="7" coveredconditionals="6" methods="9" coveredmethods="9"/>
+      <file name="copy-elements.ts" path="D:\pet-projects\react-study\React-study-rs-school\src\utils\helpers\copy-elements.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="17" type="stmt"/>
+        <line num="5" count="17" type="stmt"/>
+        <line num="6" count="17" type="stmt"/>
+      </file>
       <file name="form.ts" path="D:\pet-projects\react-study\React-study-rs-school\src\utils\helpers\form.ts">
-        <metrics statements="12" coveredstatements="10" conditionals="6" coveredconditionals="3" methods="3" coveredmethods="3"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="17" type="cond" truecount="2" falsecount="0"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="9" type="stmt"/>
-        <line num="8" count="9" type="stmt"/>
-        <line num="9" count="9" type="stmt"/>
-        <line num="10" count="9" type="cond" truecount="0" falsecount="1"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="13" count="9" type="cond" truecount="0" falsecount="1"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="16" count="9" type="stmt"/>
-        <line num="19" count="17" type="cond" truecount="1" falsecount="1"/>
+        <metrics statements="18" coveredstatements="17" conditionals="5" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
+        <line num="8" count="11" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
+        <line num="10" count="11" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="11" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="11" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="9" type="stmt"/>
+        <line num="21" count="9" type="cond" truecount="0" falsecount="1"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="9" type="stmt"/>
+        <line num="25" count="9" type="stmt"/>
+        <line num="26" count="9" type="stmt"/>
+      </file>
+      <file name="local-storage-api.ts" path="D:\pet-projects\react-study\React-study-rs-school\src\utils\helpers\local-storage-api.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="1" count="25" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="8" type="stmt"/>
+      </file>
+      <file name="main.ts" path="D:\pet-projects\react-study\React-study-rs-school\src\utils\helpers\main.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+      </file>
+      <file name="search-components.ts" path="D:\pet-projects\react-study\React-study-rs-school\src\utils\helpers\search-components.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="112" type="stmt"/>
+        <line num="5" count="20" type="stmt"/>
       </file>
     </package>
   </project>

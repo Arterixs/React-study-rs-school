@@ -1,7 +1,7 @@
 import { DateCalendar } from 'types/type/form';
 import { INDEX_ALIGMENT_MONTH, NUMBER_TEN, NUMBER_ZERO } from 'utils/constants/other';
 
-export const convertDate = (value: string | undefined) => (value ? JSON.stringify(new Date(value)) : null);
+export const convertDate = (value?: string) => (value ? JSON.stringify(new Date(value)) : null);
 
 export const getYearDayMonth = (dateString: string) => {
   const getDate = new Date(dateString);
@@ -16,4 +16,12 @@ export const getYearDayMonth = (dateString: string) => {
   return `${day}.${month}.${getDate.getFullYear()}`;
 };
 
-export const checkedFileImage = (value: null | FileList | undefined) => (value ? value[0] : null);
+export const updateDateBirthday = (date: string) => {
+  const convert = convertDate(date);
+  if (!convert) {
+    throw Error('uncorrect date');
+  }
+  const parseDate = JSON.parse(convert) as string;
+  const changeDate = getYearDayMonth(parseDate);
+  return changeDate;
+};
