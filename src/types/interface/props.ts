@@ -1,4 +1,6 @@
 import { ChangeEvent } from 'react';
+import { UseFormRegisterReturn } from 'react-hook-form';
+import { FieldsForm } from 'types/enums/form';
 import { ButtonClasses, InputClasses } from '../enums/classes';
 import { InputTypes } from '../enums/types-components';
 import { IBirdsCard } from './card';
@@ -47,6 +49,7 @@ export interface IInputProps {
   accept?: string;
   error?: boolean;
   id?: string;
+  register?: UseFormRegisterReturn<FieldsForm>;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -59,4 +62,5 @@ export interface ISelectProps {
   ref?: React.RefObject<HTMLSelectElement>;
   accept?: string;
   error?: boolean;
+  register?: UseFormRegisterReturn<FieldsForm.COUNTRY>;
 }

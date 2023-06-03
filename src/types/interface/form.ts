@@ -1,33 +1,21 @@
 import { ReactNode } from 'react';
 
-export interface IFormState {
-  errorFirstName: boolean;
-  errorLastName: boolean;
-  errorBirthday: boolean;
-  errorCountry: boolean;
-  errorAgree: boolean;
-  errorGender: boolean;
-  errorFile: boolean;
-  openHint: boolean;
-  flagHint: boolean;
-}
-
-export interface IValueFieldsForm {
-  firstName: string | undefined;
-  lastName: string | undefined;
-  birthday: string | null;
-  agree: boolean | undefined;
-  image: File | null;
-  country: string | undefined;
-  gender: string | undefined;
-}
-
 export interface IReadyObjectField {
   firstName: string;
   lastName: string;
   birthday: string;
-  agree: true;
+  agree: boolean;
   image: File;
+  country: string;
+  gender: string;
+}
+
+export interface IForm {
+  firstName: string;
+  lastName: string;
+  birthday: string;
+  agree: boolean;
+  image: File | string;
   country: string;
   gender: string;
 }

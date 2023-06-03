@@ -1,4 +1,4 @@
-import { convertDate, getYearDayMonth, checkedFileImage } from './form';
+import { convertDate, getYearDayMonth } from './form';
 
 describe('check convertDate', () => {
   it('check succes date', () => {
@@ -15,14 +15,5 @@ describe('check getYearDayMonth', () => {
   });
   it('check less ten date', () => {
     expect(getYearDayMonth('2003-05-02T22:00:00.000Z')).toEqual('03.05.2003');
-  });
-});
-
-describe('check checkedFileImage', () => {
-  it('check succes', () => {
-    expect(checkedFileImage([1, 2, 3])).toEqual(1);
-  });
-  it('check less ten date', () => {
-    expect(checkedFileImage()).toEqual(null);
   });
 });

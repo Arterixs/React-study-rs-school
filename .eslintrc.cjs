@@ -29,6 +29,14 @@ module.exports = {
       rules: {
         'import/no-default-export': 'off',
         'react/prefer-stateless-function': 'off',
+        '@typescript-eslint/no-misused-promises': [
+          2,
+          {
+            checksVoidReturn: {
+              attributes: false,
+            },
+          },
+        ],
       },
     },
   ],
