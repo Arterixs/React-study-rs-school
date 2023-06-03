@@ -42,6 +42,8 @@ export const Form = ({ option, setCard }: IPropsForm) => {
     }, 4000);
   };
 
+  const onError = () => changeStateHint();
+
   const onSubmit = (data: IForm) => {
     const { birthday, image } = data;
     const changeDate = updateDateBirthday(birthday);
@@ -53,8 +55,6 @@ export const Form = ({ option, setCard }: IPropsForm) => {
       reset();
     }
   };
-
-  const onError = () => changeStateHint();
 
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit, onError)}>
