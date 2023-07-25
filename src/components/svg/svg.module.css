@@ -1,0 +1,6 @@
+.audio {
+  width: 40px;
+  display: block;
+  height: 40px;
+  color: var(--color-svg-audio);
+}

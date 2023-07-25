@@ -1,0 +1,15 @@
+.flexGorizontBase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  width: 180px;
+  justify-content: space-evenly;
+  composes: flexGorizontBase;
+}
+
+.item {
+  display: block;
+}

@@ -1,0 +1,35 @@
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  width: 100%;
+  padding-top: 25px;
+}
+
+.wrapper-checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.wrapper-radio {
+  display: flex;
+  gap: 10px;
+}
+
+.submit {
+  background-color: var(--background-input-form);
+  color: var(--color-btn-form);
+  font-family: var(--font-semi);
+  border-radius: 10px;
+  height: 25px;
+  border: none;
+  transition: 0.3s ease all;
+  &:hover {
+    transition: 0.3s ease all;
+    cursor: pointer;
+    background-color: var(--hover-btn-form);
+  }
+}

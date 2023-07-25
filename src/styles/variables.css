@@ -1,0 +1,41 @@
+:root {
+  --background-layout: rgb(19, 115, 199);
+  --background-header: burlywood;
+  --background-main: #3c482d;
+  --background-footer: rgb(175, 139, 130);
+  --background-not-found: rgb(177, 156, 129);
+  --background-input: #d9d5cf;
+  --background-card: #303030;
+  --background-button-audio: #000;
+  --background-thumbs-audio: rgb(95, 24, 24);
+  --background-input-form: silver;
+  --background-card-form: #9d9da8;
+  --background-card-form-list-body: #8f8f8f;
+  --background-card-form-list-head: #b7b4b3;
+
+  --color-content-not-found: #637671;
+  --color-title-search: #b56c41;
+  --color-input-text: #685372;
+  --color-content-card: #9ca8a6;
+  --color-border-card: #555;
+  --color-shadow-card: #000;
+  --color-svg-audio: #7c7521;
+  --color-error: red;
+  --color-input-form: #1e4c73;
+  --color-btn-form: #334529;
+  --color-form-main: #5a9ec0;
+  --color-form-legend: #787878;
+  --color-border-card-form: #000;
+  --color-list-form-body: #fcfcfc;
+  --color-succes-form-submit: #23df23;
+
+  --hover-btn-form: #9f9b9b;
+
+  --gradient-input-audio-one: rgb(0, 188, 140) 0%;
+  --gradient-input-audio-two: rgb(61, 133, 140) 0%;
+  --gradient-input-audio-three: rgb(115, 115, 115) 0%;
+
+  --font-regular: 'Montserrat-reg', sans-serif;
+  --font-semi: 'Montserrat-semi', sans-serif;
+  --font-bold: 'Montserrat-bold', sans-serif;
+}

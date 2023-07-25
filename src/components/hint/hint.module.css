@@ -1,0 +1,6 @@
+.hint {
+  color: var(--color-error);
+  font-size: 14px;
+  font-family: var(--font-regular);
+  margin-left: 2px;
+}

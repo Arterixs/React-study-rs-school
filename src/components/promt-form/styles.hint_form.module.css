@@ -1,0 +1,17 @@
+.hint {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  font-size: 18px;
+  font-family: var(--font-regular);
+}
+
+.succes {
+  color: var(--color-succes-form-submit);
+  left: 25%;
+}
+
+.error {
+  color: var(--color-error);
+  left: 20%;
+}

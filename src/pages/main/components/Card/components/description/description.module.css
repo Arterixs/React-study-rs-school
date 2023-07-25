@@ -1,0 +1,6 @@
+.descr {
+  font-family: var(--font-regular);
+  font-size: 16px;
+  color: var(--color-content-card);
+  text-align: justify;
+}

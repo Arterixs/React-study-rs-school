@@ -1,0 +1,17 @@
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.audio {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--background-button-audio);
+  align-self: flex-start;
+}
+
+.test {
+  background-color: aqua;
+}
